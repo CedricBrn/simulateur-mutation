@@ -40,7 +40,7 @@ enableGitInfo = true
 #    weight = 3
   [[menu.nav]]
     name = "Tracts"
-    url = "/materiel/materiel"
+    url = "/materiel/"
     weight = 2
   [[menu.nav]]
     name = "À propos de SUD éducation"

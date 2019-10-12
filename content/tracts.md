@@ -10,4 +10,4 @@ draft: false
 
 
 
- [![4 pages retraites 5 décembre](../tract-retraites-5-decembre-4pages-v1-barre2.png)](../tract-retraites-5-decembre-4pages-v1-barre.pdf)
+ [![4 pages retraites 5 décembre](tract-retraites-5-decembre-4pages-v1-barre2.png)](tract-retraites-5-decembre-4pages-v1-barre.pdf)
