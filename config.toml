@@ -1,0 +1,52 @@
+baseURL = "https://wyrm.fr/~brendan/retraites/"
+languageCode = "fr-fr"
+defaultContentLanguage = "fr"
+title = "Retraites : SUD éducation vous informe"
+theme = "cupper-sud"
+#googleAnalytics = "UA-123456789-1"
+#disqusShortname = "yourdiscussshortname"
+enableGitInfo = true
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[imaging]
+  quality = 99
+
+[params]
+  description = "Site d’information sur les retraites de la fédération SUD éducation"
+  homeMetaContent = "Site d'information sur les retraites de la fédération SUD éducation, simulation de départs à la retraite sur la base du rapport Delevoye, matériel de mobilisation : tracts, brochures d'information"
+  footer = "[Fédération SUD éducation](https://www.sudeducation.org/), 2019"
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "2006-01-02"
+#  codePenUser = "someUser"
+  katex = false
+
+[menu]
+  [[menu.nav]]
+    name = "Comparateur"
+    url = "/"
+    weight = 1
+#  [[menu.nav]]
+#    name = "Blog"
+#    url = "/post/"
+#    weight = 2
+#  [[menu.nav]]
+#    name = "Tags"
+#    url = "/tags/"
+#    weight = 3
+  [[menu.nav]]
+    name = "Tracts"
+    url = "/materiel/materiel"
+    weight = 2
+  [[menu.nav]]
+    name = "À propos de SUD éducation"
+    url = "/about/"
+    weight = 4
+#  [[menu.nav]]
+#    name = "RSS"
+#    url = "/index.xml"
+#    weight = 5
