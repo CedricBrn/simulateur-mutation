@@ -16,11 +16,33 @@ function showText(num) {
     return;
 }
 
+function directionEcole() {
+num = document.getElementById('statut').value ;
+    if(num==5)
+        document.getElementById('direction').style.display='block';
+    else
+        document.getElementById('direction').style.display='none';
+    return;
+}
+
+
 </script>
 
 	<h2>Déroulement de votre carrière</h2>
 	<p title="Essai de bulle"><i>Sélectionnez votre corps&nbsp;:</i><p>
 	<p>
+Nombre d'années chargé-e de direction dans une école à classe unique&nbsp;:</p>
+<select name="Corps" id="statut" onchange=directionEcole()>
+			    <option value="0">ADJAENES</option>
+			    <option value="1">AESH</option>
+			    <option value="2">Contractuel-le enseignant-e (grille favorable, ex Paris)</option>
+			    <option value="3">Contractuel-le enseignant-e (grille défavorable, ex  Amiens)</option>
+			    <option value="4" selected>Certifié⋅e, PLP, CPE…</option>
+			    <option value="5">Prof⋅e des écoles</option>
+			   </select>
+			   
+
+<!--
 	<ul class="formulaire">
     <li><label><input type="radio" name="check" value="0" onclick="showText(0)"> ADJAENES</label></li>
 	<li><label><input type="radio" name="check" value="1" onclick="showText(0)"> Contractuel-le AESH</label></li>
@@ -30,12 +52,12 @@ function showText(num) {
 	<li><label><input type="radio" name="check" value="6" onclick="showText(0)"> Agrégé-e</label></li>
 	<li><label><input type="radio" name="check" value="5" onclick="showText(5)"> Professeur-e des écoles</label></li>
 	</ul>
-
+-->
 
 	<ul id="direction">
-<!--		<li>Nombre d'années chargé-e de direction dans une école de une classe <input id="direction_1" type="number" min="0" max="40" value="0"/></li> -->
-    <li>Nombre d'années chargé-e de direction dans une école de une classe
-			<select name="direction1an" id="direction_1">
+<p> Dans votre cas, nous avons besoin de quelques information supplémentaires.<p/>
+    <li>Nombre d'années chargé-e de direction dans une école à classe unique&nbsp;:
+			<select name="direction1classe" id="direction_1">
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
 			    <option value="3">3 années</option>
@@ -48,11 +70,53 @@ function showText(num) {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
-			 </li>
+	</li>
 
-	<li>Nombre d'années chargé-e de direction dans une école de 2 à 4 classes <input id="direction_24" type="number" min="0" max="40" value="0"/></li>
-	<li>Nombre d'années chargé-e de direction dans une école de 5 à 9 classes <input id="direction_59" type="number" min="0" max="40" value="0"/></li>
-	<li>Nombre d'années chargé-e de direction dans une école de 10 classes et plus <input id="direction_10Plus" type="number" min="0" max="40" value="0"/></li>
+	<li>Nombre d'années chargé-e de direction dans une école de 2 à 4 classes&nbsp;:
+			<select name="direction2a4classes" id="direction_24">	
+			    <option value="0" selected>0 année</option>
+			    <option value="1">1 année</option>
+			    <option value="3">3 années</option>
+			    <option value="5">5 années</option>
+			    <option value="10">10 années</option>
+			    <option value="15">15 années</option>
+			    <option value="20">20 années</option>
+			    <option value="25">25 années</option>
+			    <option value="30">30 années</option>
+			    <option value="35">35 années</option>
+			    <option value="40">40 années</option>
+			   </select>
+	</li>
+	<li>Nombre d'années chargé-e de direction dans une école de 5 à 9 classes&nbsp;: 
+			<select name="direction5a9classes" id="direction_59">	
+			    <option value="0" selected>0 année</option>
+			    <option value="1">1 année</option>
+			    <option value="3">3 années</option>
+			    <option value="5">5 années</option>
+			    <option value="10">10 années</option>
+			    <option value="15">15 années</option>
+			    <option value="20">20 années</option>
+			    <option value="25">25 années</option>
+			    <option value="30">30 années</option>
+			    <option value="35">35 années</option>
+			    <option value="40">40 années</option>
+			   </select>
+	</li>
+	<li>Nombre d'années chargé-e de direction dans une école de 10 classes et plus&nbsp;:
+			<select name="direction10classesEtPlus" id="direction_10Plus">
+			    <option value="0" selected>0 année</option>
+			    <option value="1">1 année</option>
+			    <option value="3">3 années</option>
+			    <option value="5">5 années</option>
+			    <option value="10">10 années</option>
+			    <option value="15">15 années</option>
+			    <option value="20">20 années</option>
+			    <option value="25">25 années</option>
+			    <option value="30">30 années</option>
+			    <option value="35">35 années</option>
+			    <option value="40">40 années</option>
+			   </select>
+	</li>
 	</ul>
 	</p>
 	<p>
@@ -101,43 +165,34 @@ function showText(num) {
 		indices[5] : indices des PE
 		indices[6] : indices des agrégés
 		etc.*/
-		let indices = [[326,327,328,329,330,332,335,339,343,354,367,380,390,402,411,430,450,466],
-		[325,330,334,340,346,340,346,352],
-		[410,431,453,475,498,523,548,573,598,623,650,680,710,741],
-		[367,388,410,431,453,475,498,523,548,573,598,623,650,680,710,741],
-		[388,441,445,458,471,483,511,547,583,625,669,710,756,798],
-		[388,441,445,458,471,483,511,547,583,625,669,710,756,798],
-		[448,498,502,539,574,609,651,700,750,796,830,890,925,972]];
-		//Durées des échelons selon la même numérotation
-		let dureesEchelons = [[1,2,2,2,2,2,2,2,3,3,3,2,3,3,4,3,3],
-		[3,3,3,3,3,3,3],
-		[3,3,3,3,3,3,3,3,3,3,3,3,5],
-		[1,1,2,2,2,3,3,3,3,3,3,3,3,3,3],
-		[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1],
-		[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1],
-		[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1]];
-		let valeurPoint = 4.686;//Valeur du point d'indice
-		//Bonifications indiciaires pour les directions d'écoles (en points d'indice)
-		let bonificationDirection1 = 11;//1 classe
-		let bonificationDirection2 = 24;//2 à 4 classes
-		let bonificationDirection3 = 38;//5 à 9 classes
-		let bonificationDirection4 = 48;//plus de 9 classes
+    		let indices = [[326,327,328,329,330,332,335,339,343,354,367,380,390,402,411,430,450,466],
+	    	[325,330,334,340,346,340,346,352],
+	    	[410,431,453,475,498,523,548,573,598,623,650,680,710,741],
+	    	[367,388,410,431,453,475,498,523,548,573,598,623,650,680,710,741],
+	    	[388,441,445,458,471,483,511,547,583,625,669,710,756,798],
+	    	[388,441,445,458,471,483,511,547,583,625,669,710,756,798],
+	    	[448,498,502,539,574,609,651,700,750,796,830,890,925,972]];
+	    	//Durées des échelons selon la même numérotation
+	    	let dureesEchelons = [[1,2,2,2,2,2,2,2,3,3,3,2,3,3,4,3,3],
+	    	[3,3,3,3,3,3,3],
+	    	[3,3,3,3,3,3,3,3,3,3,3,3,5],
+	    	[1,1,2,2,2,3,3,3,3,3,3,3,3,3,3],
+	    	[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1],
+	    	[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1],
+	    	[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1]];
+	    	let valeurPoint = 4.686;//Valeur du point d'indice
+	    	//Bonifications indiciaires pour les directions d'écoles (en points d'indice)
+	    	let bonificationDirection1 = 11;//1 classe
+	    	let bonificationDirection2 = 24;//2 à 4 classes
+	    	let bonificationDirection3 = 38;//5 à 9 classes
+	    	let bonificationDirection4 = 48;//plus de 9 classes
 
-		let isoe = 1213.56;//prime annuelle d'orientation 2nd degré
-		let rep = 1734;
-		let repPlus = 3479;
-		let isae = 1213.56;//prime annuelle premier degré
-		
-
-        //Récupération de la valeur du bouton "corps" sélectionné
-        let corps = 0;
-        let inputs = document.getElementsByTagName('input'),
-            inputsLength = inputs.length;
-        for (let i = 0; i < inputsLength; i++) {
-            if (inputs[i].type === 'radio' && inputs[i].checked) {
-                corps = inputs[i].value
-            }
-        }
+	    	let isoe = 1213.56;//prime annuelle d'orientation 2nd degré
+	    	let rep = 1734;
+	    	let repPlus = 3479;
+	    	let isae = 1213.56;//prime annuelle premier degré
+            //Récupération de la valeur du bouton "corps" sélectionné
+           let corps = parseInt(document.getElementById('statut').value, 10);
 
         //On récupère les âges de début et de fin de cariière
         let ageDebutCarriere = parseInt(document.getElementById('debut').value, 10);
@@ -265,7 +320,7 @@ function showText(num) {
 	    document.getElementById("pertesAnnuelles").innerHTML = "<b>Pertes avec le système à points : " + pertesAnnuelles + " € par an. </b>";
 
 	    //Remarques sur les simulations
-	    document.getElementById("remarques").innerHTML = "<h2>Remarques sur les simulations</h2><p>Les montants sont calculés à partir de la législation actuelle et des éléments du rapport Delevoye. <br/>Nous avons considéré une évolution de carrière à l'ancienneté se terminant à la hors classe.<br/>Pour des raisons de simplicité, certaines situations ne sont pas prises en compte comme : le nombre d'enfants, le service militaire ou civil, les situations de handicap, les pensions de reversion, etc.</p><p><b>Il s'agit de comprendre quels seraient les écarts entre les deux systèmes et il n'y a pas de distorsion avec ces simplifications car les ordres de grandeurs demeurent similaires.</b></p><p><i>Si le gouvernement conteste ces simulations, libre à lui de mettre à dispositions des salarié-e-s un outil similaire puisqu’un volonté de transparence est affichée !</i></p>" ;
+	    document.getElementById("remarques").innerHTML = "<h2>Remarques sur les simulations</h2><p>Les montants sont calculés à partir de la législation actuelle et des éléments du rapport Delevoye. <br/>Nous avons considéré une évolution de carrière à l'ancienneté se terminant à la hors classe.<br/>Pour des raisons de simplicité, certaines situations ne sont pas prises en compte comme : le nombre d'enfants, le service militaire ou civil, les situations de handicap, les pensions de reversion, etc.</p><p><b>Il s'agit de comprendre quels seraient les écarts entre les deux systèmes et il n'y a pas de distorsion avec ces simplifications car les ordres de grandeurs demeurent similaires.</b></p><p><i>Si le gouvernement conteste ces simulations, libre à lui de mettre à dispositions des salarié-e-s un outil similaire !</i></p>" ;
 
 	    
 
