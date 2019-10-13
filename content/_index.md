@@ -472,9 +472,25 @@ function affichePrimes() {
 	    let pensionRepartition = dernierSalaire * 0.75 * decote * trimestresAcquis / trimestresRequis;
 	    //Arrondi au centime
 	    pensionRepartition = Math.floor(pensionRepartition * 100) / 100;
-	    //Ecriture de la pension dans le champ prévu à cet effet
-	    document.getElementById("retraiteRepartition").innerHTML = "Montant mensuel brut de la retraite : " + pensionRepartition + " €";
 
+	    
+	    // Actuel minimum contributif
+	    let minimumRetraiteRepartition = 695.59;
+	    let coefficientMinRepartition;
+	    
+	    if (trimestresAcquis >= trimestresRequis) {
+	        coefficientMinRepartition = 1;
+	    } else {
+	        coefficientMinRepartition = trimestresAcquis / trimestresRequis;
+	    }
+	    
+	     //Ecriture de la pension dans le champ prévu à cet effet
+	    if (pensionRepartition < minimumRetraiteRepartition * coefficientMinRepartition) {
+	        pensionRepartition = minimumRetraiteRepartition * coefficientMinRepartition;
+	        document.getElementById("retraiteRepartition").innerHTML = "Montant mensuel brut de la retraite trop bas. Vous serez au minimum contributif : " + pensionRepartition + "€";
+	    } else {
+	    document.getElementById("retraiteRepartition").innerHTML = "Montant mensuel brut de la retraite : " + pensionRepartition + "€";
+        }
 	    //Affichage du titre 
 	    document.getElementById('resultatPoint').innerHTML = "Retraite dans le système à points (Delevoye)";
 
@@ -550,7 +566,7 @@ function affichePrimes() {
 	    //Ecriture de la pension dans le champ prévu à cet effet
 	     if (retraitePoints < minimumRetraite * coefficientMinimumContributif){
 	    	    retraitePoints = minimumRetraite * coefficientMinimumContributif;
-	    	    document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite trop bas. Vous serez concerné-e par le minimum contributif (85% du SMIC proratisé en fonction du nombre d'années travaillées) : " + retraitePoints + " €";
+	    	    document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite trop bas. Vous serez concerné-e par le minimum contributif (85% du SMIC proratisé en fonction du nombre d'années travaillées) : " + Math.floor(retraitePoints * 100) / 100 + " €";
 	    } else {
 	        document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite : " + retraitePoints + " €";
 	    }
