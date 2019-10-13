@@ -40,7 +40,9 @@ function affichePrimes() {
 	
 	<div class="blocSelection">
 	<label for="statut">Sélectionnez votre corps&nbsp;:</label>
+	<div id="apparenceStatut">
     <div class="menuSelection">
+	
 <select name="Corps" id="statut" onchange=affichePrimes()>
 			    <option value="0">ADJAENES</option>
 			    <option value="1">AESH</option>
@@ -50,6 +52,7 @@ function affichePrimes() {
 			    <option value="5">Prof⋅e des écoles</option>
 			   </select>
     </div>
+	</div>
     </div>
 
 <!--

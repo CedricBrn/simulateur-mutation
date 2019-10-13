@@ -1058,9 +1058,25 @@ h1 svg {
 	
 }
 
+
+
 .menuSelection {
 	position: relative; 
-	width: 75%; /* En cas de pb de compatibilité, retirer cette ligne */
+	width: 50%; /* En cas de pb de compatibilité, retirer cette ligne */
+	background-color: #fff;
+	border: #777 1px solid;
+	margin: 0 0 1.5em 0;
+	border-radius:15px;
+	overflow: hidden; 
+	/* 
+		Le select natif pourra 
+		dépasser sans être vu 
+	*/
+}
+
+#apparenceStatut .menuSelection {
+	position: relative; 
+	width: 100%; /* En cas de pb de compatibilité, retirer cette ligne */
 	background-color: #fff;
 	border: #777 1px solid;
 	margin: 0 0 1.5em 0;
