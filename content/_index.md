@@ -16,7 +16,7 @@ function affichePrimes() {
     } else {
                 document.getElementById('primes').style.display='block';
     }
-    if(num==2 || num==3 || num==4) {
+    if(num==2 || num==3 || num==4 || num==6) {
         document.getElementById('primeISOE').style.display='block';
     } else {
         document.getElementById('primeISOE').style.display='none';
@@ -49,23 +49,12 @@ function affichePrimes() {
 			    <option value="2">Contractuel-le enseignant-e (grille favorable, ex Paris)</option>
 			    <option value="3">Contractuel-le enseignant-e (grille défavorable, ex  Amiens)</option>
 			    <option value="4" selected>Certifié⋅e, PLP, CPE…</option>
+			    <option value ="6">Agrégé-e</option>
 			    <option value="5">Prof⋅e des écoles</option>
 			   </select>
     </div>
 	</div>
     </div>
-
-<!--
-	<ul class="formulaire">
-    <li><label><input type="radio" name="check" value="0" onclick="showText(0)"> ADJAENES</label></li>
-	<li><label><input type="radio" name="check" value="1" onclick="showText(0)"> Contractuel-le AESH</label></li>
-	<li><label><input type="radio" name="check" value="2" onclick="showText(0)"> Contractuel-le enseignant-e avec une grille salariale favorable, par exemple Paris</label></li>
-	<li><label><input type="radio" name="check" value="3" onclick="showText(0)"> Contractuel-le enseignant-e avec une grille salariale défavorable, par exemple Amiens</label></li>
-	<li><label><input type="radio" name="check" value="4" onclick="showText(0)" checked="checked"> Certifié-e et assimilé-e</label></li>
-	<li><label><input type="radio" name="check" value="6" onclick="showText(0)"> Agrégé-e</label></li>
-	<li><label><input type="radio" name="check" value="5" onclick="showText(5)"> Professeur-e des écoles</label></li>
-	</ul>
--->
 
 	<ul id="direction">
 <p> Dans votre cas, nous avons besoin de quelques information supplémentaires.<p/>
@@ -535,11 +524,8 @@ function affichePrimes() {
 	    //Remarques sur les simulations
 	    document.getElementById("remarques").innerHTML = "<h2>Remarques sur les simulations</h2><p>Les montants sont calculés à partir de la législation actuelle et des éléments du rapport Delevoye. <br/>Nous avons considéré une évolution de carrière à l'ancienneté se terminant à la hors classe.<br/>Pour des raisons de simplicité, certaines situations ne sont pas prises en compte comme : le nombre d'enfants, le service militaire ou civil, les situations de handicap, les pensions de reversion, etc.</p><p><b>Il s'agit de comprendre quels seraient les écarts entre les deux systèmes et il n'y a pas de distorsion avec ces simplifications car les ordres de grandeurs demeurent similaires.</b></p><p><i>Si le gouvernement conteste ces simulations, libre à lui de mettre à dispositions des salarié-e-s un outil similaire !</i></p>" ;
 
-	    
-
     }
 </script>
 
 
 {{< /rawhtml >}}
-
