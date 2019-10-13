@@ -74,4 +74,4 @@ La logique de masquage et affichage des différents menus est implémentée dans
 
 L’algorithme compare essentiellement la différnece de revenu projeté entre le système actuel et le système par points annoncé par Delevoye.
 
-L’implémentation se trouve dans `static/js/retraites.js`.
+L’implémentation se trouve dans `static/js/retraites.js`. Le code est documenté au maximum pour permettre sa réutilisation. Si des paramètres devaient changer, il est possible d'ajuster la logique.
