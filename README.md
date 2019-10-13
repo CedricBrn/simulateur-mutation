@@ -8,6 +8,12 @@ Hugo est un générateur de site statique. Il suffit, à la racine du site, d’
 
 Si on veut faire tourner le site localement, il suffit d’invoquer Hugo ainsi : `hugo server -D`. Les changements conduiront à un rechargement immédiat des pages. Le site de test sera disponible par défaut à l’URL locale suivante : [http://localhost:1313](http://localhost:1313).
 
+## Prérequis utilisateur
+
+Les utilisateur-ice-s du simulateur devraient pouvoir utiliser la page dans n'importe quel navigateur sur n'importe quel terminal, à la condition de pouvoir exécuter du javascript.
+
+Les navigateurs ie9+, Edge, Safari, Firefox, Chrome, Opera, Vivaldi sont supportés sur Windows / Mac / Linux. Les navigateurs Safari, Chrome, Firefox sont supportés sur mobile.
+
 ## Configuration du site
 
 Le thème de base est une modification du thème [Cupper](https://themes.gohugo.io/cupper-hugo-theme/) pour Hugo. Il se trouve dans le répertoire `themes/cupper-sud`.
@@ -58,8 +64,14 @@ La syntaxe est la suivante : dans un article rédigé en Markdown, il suffit d�
 
 ```
 {{< rawhtml >}}
-Le code html et le js
+Le code html
 {{< /rawhtml >}}
 ```
 
-## Explication de l’algorithme
+La logique de masquage et affichage des différents menus est implémentée dans le fichier `static/js/esthetique.js`.
+
+## L’algorithme
+
+L’algorithme compare essentiellement la différnece de revenu projeté entre le système actuel et le système par points annoncé par Delevoye.
+
+L’implémentation se trouve dans `static/js/retraites.js`.
