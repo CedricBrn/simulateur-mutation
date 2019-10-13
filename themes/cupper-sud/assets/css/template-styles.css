@@ -1060,7 +1060,7 @@ h1 svg {
 
 .menuSelection {
 	position: relative; 
-	width: 50%; /* En cas de pb de compatibilité, retirer cette ligne */
+	width: 75%; /* En cas de pb de compatibilité, retirer cette ligne */
 	background-color: #fff;
 	border: #777 1px solid;
 	margin: 0 0 1.5em 0;
@@ -1071,6 +1071,7 @@ h1 svg {
 		dépasser sans être vu 
 	*/
 }
+
 
 .menuSelection select {
 	-webkit-appearance: none;
