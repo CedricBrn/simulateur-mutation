@@ -45,7 +45,7 @@ draft: false
 Pour éviter d'avoir à copier/coller ces lignes, on peut créer un post en tapant simplement depuis la racinse du site :
 
 ```sh
-hugo create content/nomdelarticle.md
+hugo new content/nomdelarticle.md
 ```
 
 ## Simulateur
