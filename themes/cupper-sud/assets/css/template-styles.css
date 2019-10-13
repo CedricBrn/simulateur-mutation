@@ -71,7 +71,9 @@ figure p img {
 [data-expands]:focus svg,
 .patterns a:focus .text,
 [for="themer"] :focus + [aria-hidden] {
-    outline: 4px solid #999;
+
+/* Retirer le cadre gris autour des boutons et des actions cliquées */
+ /*   outline: 4px solid #999; */
 }
 a {
   outline-offset: 2px;
