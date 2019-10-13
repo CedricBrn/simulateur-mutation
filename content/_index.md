@@ -500,12 +500,60 @@ function affichePrimes() {
 	    }
 	    //Affichage de l'âge pivot
 	    document.getElementById("agePivot").innerHTML ="Age du taux plein (âge pivot) : " + agePivot;
-	    let decotePoints = 1 - (agePivot - ageFinCarriere) * 0.05;
-	    let retraitePoints = nombrePoints * decotePoints * 0.55 / 12;
+	    // La décote est de 5% / an
+	    let coefficientDecote = 0.05;
+	    // Valeur de service du point prévue dans le rapport Delevoye
+	    let valeurServicePoints = 0.55;
+	    let decotePoints = 1 - (agePivot - ageFinCarriere) * coefficientDecote;
+
+	    // Le calcul de la retraite à points mensuelle est le suivant :
+	    // Nombre de points acquis × décote × valeur de service du point / 12 mois
+	    let retraitePoints = nombrePoints * decotePoints * valeurServicePoints / 12;
+
+	    // Sera-t-on à la retraite minimum revalorisée ?
+	    let smicNet = 1202.92;
+	    let tauxMinimumContributif = 0.85;
+	    let minimumRetraite = smicNet * tauxMinimumContributif;
+
+	    // Nombre minimal d'années contisées pour bénéficier du minimum contributif
+	    // Le minimum contributif est distinct de l'ASPA (minimum vieillesse)
+	    // Fixé à 43 ans au minimum, puis augmente avec l'espérance de vie projetée.
+	    
+	    annees = ageFinCarriere - ageDebutCarriere;
+	    
+	    let annuitesrequises = 43;
+	    if (agePivot > 64) {
+	        annuitesrequises += 1;
+	    }
+	    if (agePivot > 65) {
+	        annuitesrequises += 1;
+	    }
+	    let coefficientMinimumContributif;
+	    if (annuites > annuitesrequises) {
+	        coefficientMinimumContributif = 1;
+	    } else {
+	        coefficientMinimumContributif = annees / annuitesrequises;
+	    }
+	    	    if (retraitePoints < minimumRetraite * coefficientMinimumContributif){
+	    	    retraitePoints = minimumRetraite * coefficientMinimumContributif;
+	    }
+// Minimum vieillesse
+	    // Les prélèvements sur les retraites sont en général de 7,4 %
+//	    let prelevementsRetraite = 0.074;
+	    
+//	    if (retraitePoints < 995.34 / 0.926 ) {
+//	        retraitePoints = 995.34 / 0.926;
+//	    }
+
 	    //Arrondi au centime
 	    retraitePoints = Math.floor(retraitePoints * 100) / 100;
 	    //Ecriture de la pension dans le champ prévu à cet effet
-	    document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite : " + retraitePoints + " €";
+	     if (retraitePoints < minimumRetraite * coefficientMinimumContributif){
+	    	    retraitePoints = minimumRetraite * coefficientMinimumContributif;
+	    	    document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite trop bas. Vous serez concerné-e par le minimum contributif (85% du SMIC proratisé en fonction du nombre d'années travaillées) : " + retraitePoints + " €";
+	    } else {
+	        document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite : " + retraitePoints + " €";
+	    }
 
 	    //calcul des pertes mensuelles
 	    let pertesMensuelles = pensionRepartition - retraitePoints;	    
