@@ -1037,6 +1037,10 @@ h1 svg {
     list-style-type: none;
 }
 
+#primeISAE {
+        display: none;
+}
+
 input[type=number] {
     width: 7ch;
     padding: 1ex;

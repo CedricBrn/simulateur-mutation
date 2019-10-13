@@ -7,22 +7,24 @@ draft: false
 
 {{< rawhtml >}}
 
-<script type="text/javascript">
-function showText(num) {
-    if(num==5)
-        document.getElementById('direction').style.display='block';
-    else
-        document.getElementById('direction').style.display='none';
-    return;
-}
+<script>
 
-function directionEcole() {
-num = document.getElementById('statut').value ;
-    if(num==5)
+function affichePrimes() {
+    num = document.getElementById('statut').value ;
+    if(num==2 || num==3 || num==4) {
+        document.getElementById('primeISOE').style.display='block';
+    } else {
+        document.getElementById('primeISOE').style.display='none';
+    }
+    if(num==5) {
         document.getElementById('direction').style.display='block';
-    else
+        document.getElementById('primeISAE').style.display='block';
+    } else {
         document.getElementById('direction').style.display='none';
+        document.getElementById('primeISAE').style.display='none';
+    }
     return;
+    
 }
 
 
@@ -32,7 +34,7 @@ num = document.getElementById('statut').value ;
 	<p title="Essai de bulle"><i>Sélectionnez votre corps&nbsp;:</i><p>
 	<p>
 Nombre d'années chargé-e de direction dans une école à classe unique&nbsp;:</p>
-<select name="Corps" id="statut" onchange=directionEcole()>
+<select name="Corps" id="statut" onchange=affichePrimes()>
 			    <option value="0">ADJAENES</option>
 			    <option value="1">AESH</option>
 			    <option value="2">Contractuel-le enseignant-e (grille favorable, ex Paris)</option>
@@ -121,19 +123,159 @@ Nombre d'années chargé-e de direction dans une école à classe unique&nbsp;:<
 	</p>
 	<p>
 	<ul class="formulaire">
-		<li>Âge de début de carrière&nbsp;: <input id="debut" type="number" min="20" max="50" value="23"/></li>
-		<li>Âge de départ à la retraite&nbsp;: <input id="fin" type="number" min="62" max="67" value="62"/></li>
-		<li>Année de naissance&nbsp;: <input id="naissance" type="number" min="1958=" max="1998" value="1963"/></li>
+	<li>Âge de début de carrière&nbsp;: <select name="ageDebutCarriere" id="debut">
+			    <option value="20">20 ans</option>
+			    <option value="21">21 ans</option>
+			    <option value="22">22 ans</option>
+			    <option value="23" selected>23 ans</option>
+			    <option value="24">24 ans</option>
+			    <option value="25">25 ans</option>
+			    <option value="26">26 ans</option>
+			    <option value="27">27 ans</option>
+			    <option value="28">28 ans</option>
+			    <option value="29">29 ans</option>
+			    <option value="30">30 ans</option>
+			    <option value="31">31 ans</option>
+			    <option value="32">32 ans</option>
+			    <option value="33">33 ans</option>
+			    <option value="34">34 ans</option>
+			    <option value="35">35 ans</option>
+			    <option value="36">36 ans</option>
+			    <option value="37">37 ans</option>
+			    <option value="38">38 ans</option>
+			    <option value="39">39 ans</option>
+			    <option value="40">40 ans</option>
+			    <option value="41">41 ans</option>
+			    <option value="42">42 ans</option>
+			    <option value="43">43 ans</option>
+			    <option value="44">44 ans</option>
+			    <option value="45">45 ans</option>
+			    <option value="46">46 ans</option>
+			    <option value="47">47 ans</option>
+			    <option value="48">48 ans</option>
+			    <option value="49">49 ans</option>
+			    <option value="50">50 ans</option>
+			   </select>
+	<li>Âge de départ à la retraite&nbsp;: 
+	<select name="ageFinCarriere" id="fin">
+			    <option value="62" selected>62 ans</option>
+			    <option value="63">63 ans</option>
+			    <option value="64">64 ans</option>
+			    <option value="65">65 ans</option>
+			    <option value="66">66 ans</option>
+			    <option value="67">67 ans</option>
+			   </select>
+	<li>Année de naissance&nbsp;: 
+                <select name="anneeNaissance" id="naissance">
+			    <option value="1958">1958</option>
+			    <option value="1959">1959</option>
+			    <option value="1960">1960</option>
+			    <option value="1961">1961</option>
+			    <option value="1962">1962</option>
+			    <option value="1963">1963</option>
+			    <option value="1964">1964</option>
+			    <option value="1965">1965</option>
+			    <option value="1966">1966</option>
+			    <option value="1967">1967</option>
+			    <option value="1968">1968</option>
+			    <option value="1969">1969</option>
+			    <option value="1970" selected>1970</option>
+			    <option value="1971">1971</option>
+			    <option value="1972">1972</option>
+			    <option value="1973">1973</option>
+			    <option value="1974">1974</option>
+			    <option value="1975">1975</option>
+			    <option value="1976">1976</option>
+			    <option value="1977">1977</option>
+			    <option value="1978">1978</option>
+			    <option value="1979">1979</option>
+			    <option value="1980">1980</option>
+			    <option value="1981">1981</option>
+			    <option value="1982">1982</option>
+			    <option value="1983">1983</option>
+			    <option value="1984">1984</option>
+			    <option value="1985">1985</option>
+			    <option value="1986">1986</option>
+			    <option value="1987">1987</option>
+			    <option value="1988">1988</option>
+			    <option value="1989">1989</option>
+			    <option value="1990">1990</option>
+			    <option value="1991">1991</option>
+			    <option value="1992">1992</option>
+			    <option value="1993">1993</option>
+			    <option value="1994">1994</option>
+			    <option value="1995">1995</option>
+			    <option value="1996">1996</option>
+			    <option value="1997">1997</option>
+			    <option value="1998">1998</option>
+			   </select>
+    </li>
 	</ul>
 	</p>
 	<h3>Et si on intégrait les primes ?</h3>
 	<p><i>Nous vous proposons de faire des simulations en intégrant les primes. Pour ne pas les prendre en compte, il suffit de laisser 0 dans le champ prévu. Ce dispositif n'est pas prévu dans le rapport Delevoye, mais il a été mis sur la table pour compenser les pertes de pension prévues dans la fonction publique. Faites-vous votre opinion avec ces simulations...</i></p>
 	<p>
 	<ul class="formulaire">
-	    <li>Nombre d'années avec l'ISOE <input id="isoe" type="number" min="0" max="42" value="0"/></li>
-	    <li>Nombre d'années avec l'ISAE <input id="isae" type="number" min="0" max="42" value="0"/></li>
-	    <li>Nombre d'années en REP <input id="rep" type="number" min="0" max="42" value="0"/></li>
-	    <li>Nombre d'années en REP+ <input id="repPlus" type="number" min="0" max="42" value="0"/></li>
+	    <li id="primeISOE">Nombre d'années avec l'ISOE&nbsp;:
+	    <select name="menuISOE" id="isoe">	
+			    <option value="0" selected>0 année</option>
+			    <option value="1">1 année</option>
+			    <option value="3">3 années</option>
+			    <option value="5">5 années</option>
+			    <option value="10">10 années</option>
+			    <option value="15">15 années</option>
+			    <option value="20">20 années</option>
+			    <option value="25">25 années</option>
+			    <option value="30">30 années</option>
+			    <option value="35">35 années</option>
+			    <option value="40">40 années</option>
+			   </select>
+        </li>
+	    <li id="primeISAE">Nombre d'années avec l'ISAE&nbsp;:
+	    <select name="menuISAE" id="isae">	
+			    <option value="0" selected>0 année</option>
+			    <option value="1">1 année</option>
+			    <option value="3">3 années</option>
+			    <option value="5">5 années</option>
+			    <option value="10">10 années</option>
+			    <option value="15">15 années</option>
+			    <option value="20">20 années</option>
+			    <option value="25">25 années</option>
+			    <option value="30">30 années</option>
+			    <option value="35">35 années</option>
+			    <option value="40">40 années</option>
+			   </select>
+		</li>
+	    <li>Nombre d'années en REP&nbsp;:
+	    <select name="menuREP" id="rep">	
+			    <option value="0" selected>0 année</option>
+			    <option value="1">1 année</option>
+			    <option value="3">3 années</option>
+			    <option value="5">5 années</option>
+			    <option value="10">10 années</option>
+			    <option value="15">15 années</option>
+			    <option value="20">20 années</option>
+			    <option value="25">25 années</option>
+			    <option value="30">30 années</option>
+			    <option value="35">35 années</option>
+			    <option value="40">40 années</option>
+			   </select>
+	    </li>
+	    <li>Nombre d'années en REP+&nbsp;:
+	    <select name="menuREPPlus" id="repPlus">
+			    <option value="0" selected>0 année</option>
+			    <option value="1">1 année</option>
+			    <option value="3">3 années</option>
+			    <option value="5">5 années</option>
+			    <option value="10">10 années</option>
+			    <option value="15">15 années</option>
+			    <option value="20">20 années</option>
+			    <option value="25">25 années</option>
+			    <option value="30">30 années</option>
+			    <option value="35">35 années</option>
+			    <option value="40">40 années</option>
+			   </select>
+	    </li>
 	</ul>
 	</p>
 	<input type="button" value="Calculer ma retraite" onclick="calcul();" />
