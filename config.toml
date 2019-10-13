@@ -40,12 +40,16 @@ enableGitInfo = true
 #    weight = 3
   [[menu.nav]]
     name = "Tracts"
-    url = "/materiel/"
+    url = "/tracts/"
     weight = 2
   [[menu.nav]]
     name = "À propos de SUD éducation"
-    url = "/about/"
-    weight = 4
+    url = "/apropos/"
+    weight = 3
+  [[menu.nav]]
+    name = "Presse"
+    url = "/presse/"
+    weight = 4    
 #  [[menu.nav]]
 #    name = "RSS"
 #    url = "/index.xml"
