@@ -10,7 +10,6 @@ Si on veut faire tourner le site localement, il suffit d’invoquer Hugo ainsi :
 
 ## Configuration du site
 
-
 Le thème de base est une modification du thème [Cupper](https://themes.gohugo.io/cupper-hugo-theme/) pour Hugo. Il se trouve dans le répertoire `themes/cupper-sud`.
 
 La configuration de base du site se trouve dans le fichier `config.toml` à la racine du site. Le fichier est assez simple à comprendre : on peut définir des rubriques et des pages.
@@ -27,6 +26,28 @@ Les fichiers sont écrits en Markdown, un langage à balisage léger bien plus f
 
 Pour avoir un aperçu efficace de la syntaxe Markdown, il suffit de se rendre ici : [https://wprock.fr/blog/markdown-syntaxe/](https://wprock.fr/blog/markdown-syntaxe/).
 
+Chaque fichier commence par 5 lignes :
+
+```
+---
+title: "Comparateur de retraites entre le système actuel et le projet du gouvernement"
+date: 2019-10-12T08:08:47+02:00
+draft: false
+---
+```
+
+- title: Ce sera le titre de la page. Il ne faut pas l’omettre.
+
+- date: la date de création.  Inutile sauf si on veut classer par ordre chronologique les pages.
+
+- draft: il faut mettre à **false** pour être certain-e que le site sera généré avec la page.
+
+Pour éviter d'avoir à copier/coller ces lignes, on peut créer un post en tapant simplement depuis la racinse du site :
+
+```sh
+hugo create content/nomdelarticle.md
+```
+
 ## Simulateur
 
 Le simulateur est composé de code javascript (sans appel à une bibliothèque externe) dans une page html.
@@ -42,5 +63,3 @@ Le code html et le js
 ```
 
 ## Explication de l’algorithme
-
-
