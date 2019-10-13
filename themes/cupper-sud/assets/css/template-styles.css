@@ -217,7 +217,9 @@ button {
     color: #fefefe;
     padding: 0.75rem;
     border: 0;
-}
+} 
+
+
 [data-launch] {
   font-size: 0.66rem !important;
   padding: 0.5rem !important;
@@ -1026,22 +1028,105 @@ h1 svg {
 }
 
 
-/* Décasctiver les puces des boutons radio */
+/* Code surchargeant le thème de base */
+
+/* Pour revenir au thème standard, supprimer tout ce qui est en dessous. */
+
+
 
 .formulaire {
-    list-style-type: none;
+    list-style-type: none; /* Désactiver les puces du formulaire*/
+    padding-left: 0;
+    margin-left: 0 !important; /* retire l'indentation des puces */
    }
 
 #direction {
     display: none;
     list-style-type: none;
+    padding-left: 0;
+    margin-left: 0 !important;
 }
 
 #primeISAE {
         display: none;
 }
 
-input[type=number] {
-    width: 7ch;
-    padding: 1ex;
+
+
+.blocSelection {
+	position: relative;
+	
+}
+
+.menuSelection {
+	position: relative; 
+	width: 50%; /* En cas de pb de compatibilité, retirer cette ligne */
+	background-color: #fff;
+	border: #777 1px solid;
+	margin: 0 0 1.5em 0;
+	border-radius:15px;
+	overflow: hidden; 
+	/* 
+		Le select natif pourra 
+		dépasser sans être vu 
+	*/
+}
+
+.menuSelection select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	width: 100%; 
+	/* 
+		On est sûr de ne plus voir
+		la flèche native 
+	*/
+	
+	height: auto;
+	border: 0; 
+	margin: 0;
+	padding: .75em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* 
+		On empêche le texte d'aller
+		jusqu'au bout s'il est trop long
+	*/
+}
+
+.menuSelection::after { 
+	/* Le pointeur du select */
+	content: '';
+	position: absolute;
+	top: 50%; 
+	margin-top: -3px;
+	right: .75em;  
+	display: block; 
+	width: 0; height: 0;
+	border-color: transparent;
+	border-top-color: #444; 
+	border-width: 6px;
+	border-style: solid;
+	pointer-events: none;
+	
+}
+
+.boutonCalcul{
+text-align: center;
+}
+
+.boutonCalcul>input[type=button] {
+  background-color: orangeRed;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 15px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }

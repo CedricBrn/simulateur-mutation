@@ -11,6 +11,11 @@ draft: false
 
 function affichePrimes() {
     num = document.getElementById('statut').value ;
+    if (num == 1) {
+                document.getElementById('primes').style.display='none';
+    } else {
+                document.getElementById('primes').style.display='block';
+    }
     if(num==2 || num==3 || num==4) {
         document.getElementById('primeISOE').style.display='block';
     } else {
@@ -31,8 +36,11 @@ function affichePrimes() {
 </script>
 
 	<h2>Déroulement de votre carrière</h2>
-	<p><i>Sélectionnez votre corps&nbsp;:</i><p>
+
 	
+	<div class="blocSelection">
+	<label for="statut">Sélectionnez votre corps&nbsp;:</label>
+    <div class="menuSelection">
 <select name="Corps" id="statut" onchange=affichePrimes()>
 			    <option value="0">ADJAENES</option>
 			    <option value="1">AESH</option>
@@ -41,7 +49,8 @@ function affichePrimes() {
 			    <option value="4" selected>Certifié⋅e, PLP, CPE…</option>
 			    <option value="5">Prof⋅e des écoles</option>
 			   </select>
-			   
+    </div>
+    </div>
 
 <!--
 	<ul class="formulaire">
@@ -57,7 +66,11 @@ function affichePrimes() {
 
 	<ul id="direction">
 <p> Dans votre cas, nous avons besoin de quelques information supplémentaires.<p/>
-    <li>Nombre d'années chargé-e de direction dans une école à classe unique&nbsp;:
+    <li>
+    	<div class="blocSelection">
+    	<label for="direction_1">Nombre d'années chargé-e de direction dans une école à classe unique&nbsp;:</label>
+    <div class="menuSelection">
+    
 			<select name="direction1classe" id="direction_1">
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
@@ -71,9 +84,14 @@ function affichePrimes() {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
+			   </div>
+			   </div>
 	</li>
 
-	<li>Nombre d'années chargé-e de direction dans une école de 2 à 4 classes&nbsp;:
+	<li>
+	        	<div class="blocSelection">
+    	<label for="direction_24">Nombre d'années chargé-e de direction dans une école de 2 à 4 classes&nbsp;:</label>
+    <div class="menuSelection">
 			<select name="direction2a4classes" id="direction_24">	
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
@@ -87,8 +105,13 @@ function affichePrimes() {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
+			   </div>
+			   </div>
 	</li>
-	<li>Nombre d'années chargé-e de direction dans une école de 5 à 9 classes&nbsp;: 
+	<li>
+	    <div class="blocSelection">
+    	<label for="direction_59">Nombre d'années chargé-e de direction dans une école de 5 à 9 classes&nbsp;:</label>
+    <div class="menuSelection">
 			<select name="direction5a9classes" id="direction_59">	
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
@@ -102,8 +125,13 @@ function affichePrimes() {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
+			   </div>
+			   </div>
 	</li>
-	<li>Nombre d'années chargé-e de direction dans une école de 10 classes et plus&nbsp;:
+	<li>
+	<div class="blocSelection">
+    	<label for="direction_10Plus">Nombre d'années chargé-e de direction dans une école de 10 classes et plus&nbsp;:</label>
+    <div class="menuSelection">
 			<select name="direction10classesEtPlus" id="direction_10Plus">
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
@@ -117,12 +145,17 @@ function affichePrimes() {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
+			   </div>
+			   </div>
 	</li>
 	</ul>
 	</p>
-	<p>
 	<ul class="formulaire">
-	<li>Âge de début de carrière&nbsp;: <select name="ageDebutCarriere" id="debut">
+	<li>
+	<div class="blocSelection">
+    	<label for="debut">Âge de début de carrière&nbsp;:</label>
+    <div class="menuSelection">
+	<select name="ageDebutCarriere" id="debut">
 			    <option value="20">20 ans</option>
 			    <option value="21">21 ans</option>
 			    <option value="22">22 ans</option>
@@ -155,7 +188,12 @@ function affichePrimes() {
 			    <option value="49">49 ans</option>
 			    <option value="50">50 ans</option>
 			   </select>
-	<li>Âge de départ à la retraite&nbsp;: 
+			   </div>
+			   </div>
+	<li>
+		<div class="blocSelection">
+    	<label for="fin">Âge de départ à la retraite&nbsp;:</label>
+    <div class="menuSelection"> 
 	<select name="ageFinCarriere" id="fin">
 			    <option value="62" selected>62 ans</option>
 			    <option value="63">63 ans</option>
@@ -164,7 +202,12 @@ function affichePrimes() {
 			    <option value="66">66 ans</option>
 			    <option value="67">67 ans</option>
 			   </select>
-	<li>Année de naissance&nbsp;: 
+			   </div>
+			   </div>
+	<li>
+		<div class="blocSelection">
+    	<label for="naissance">Année de naissance&nbsp;:</label>
+    <div class="menuSelection"> 
                 <select name="anneeNaissance" id="naissance">
 			    <option value="1958">1958</option>
 			    <option value="1959">1959</option>
@@ -208,14 +251,19 @@ function affichePrimes() {
 			    <option value="1997">1997</option>
 			    <option value="1998">1998</option>
 			   </select>
+			   </div>
+			   </div>
     </li>
 	</ul>
-	</p>
+	<div id="primes">
 	<h3>Et si on intégrait les primes ?</h3>
 	<p><i>Nous vous proposons de faire des simulations en intégrant les primes. Pour ne pas les prendre en compte, il suffit de laisser 0 dans le champ prévu. Ce dispositif n'est pas prévu dans le rapport Delevoye, mais il a été mis sur la table pour compenser les pertes de pension prévues dans la fonction publique. Faites-vous votre opinion avec ces simulations...</i></p>
 	<p>
 	<ul class="formulaire">
-	    <li id="primeISOE">Nombre d'années avec l'ISOE&nbsp;:
+	    <li id="primeISOE">
+	    		<div class="blocSelection">
+    	<label for="isoe">Nombre d'années avec l'ISOE&nbsp;:</label>
+    <div class="menuSelection"> 
 	    <select name="menuISOE" id="isoe">	
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
@@ -229,8 +277,13 @@ function affichePrimes() {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
+			   </div>
+			   </div>
         </li>
-	    <li id="primeISAE">Nombre d'années avec l'ISAE&nbsp;:
+	    <li id="primeISAE">
+	    	    		<div class="blocSelection">
+    	<label for="isae">Nombre d'années avec l'ISAE&nbsp;:</label>
+    <div class="menuSelection">
 	    <select name="menuISAE" id="isae">	
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
@@ -244,8 +297,14 @@ function affichePrimes() {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
+			   </div>
+			   </div>
 		</li>
-	    <li>Nombre d'années en REP&nbsp;:
+	    <li>
+	    
+	      		<div class="blocSelection">
+    	<label for="rep">Nombre d'années en REP&nbsp;:</label>
+    <div class="menuSelection">
 	    <select name="menuREP" id="rep">	
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
@@ -259,8 +318,13 @@ function affichePrimes() {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
+		    </div>
+		   </div>
 	    </li>
-	    <li>Nombre d'années en REP+&nbsp;:
+	    <li>
+	          		<div class="blocSelection">
+    	<label for="repPlus">Nombre d'années en REP+&nbsp;:</label>
+    <div class="menuSelection">
 	    <select name="menuREPPlus" id="repPlus">
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
@@ -274,11 +338,16 @@ function affichePrimes() {
 			    <option value="35">35 années</option>
 			    <option value="40">40 années</option>
 			   </select>
+			    </div>
+			   </div>
 	    </li>
 	</ul>
 	</p>
+	
+	</div>
+	<div class="boutonCalcul" >
 	<input type="button" value="Calculer ma retraite" onclick="calcul();" />
-
+    </div>
 	<!--Balises d'accueil des résultats dans le système actuel -->
 	<h2 id="resultatActuel"></h2>
 	<p id="salaire"></p>
