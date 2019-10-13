@@ -31,9 +31,8 @@ function affichePrimes() {
 </script>
 
 	<h2>Déroulement de votre carrière</h2>
-	<p title="Essai de bulle"><i>Sélectionnez votre corps&nbsp;:</i><p>
-	<p>
-Nombre d'années chargé-e de direction dans une école à classe unique&nbsp;:</p>
+	<p><i>Sélectionnez votre corps&nbsp;:</i><p>
+	
 <select name="Corps" id="statut" onchange=affichePrimes()>
 			    <option value="0">ADJAENES</option>
 			    <option value="1">AESH</option>
