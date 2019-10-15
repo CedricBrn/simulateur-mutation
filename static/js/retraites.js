@@ -171,9 +171,7 @@
         annees = ageFinCarriere - ageDebutCarriere;
 
         //Intégration des primes
-        let primeIsoe = parseInt(document.getElementById('isoe').value, 10) * isoe;
-        let primeIsae = parseInt(document.getElementById('isoe').value, 10) * isae;
-        let primeRep = parseInt(document.getElementById('rep').value, 10) * rep;
+                let primeRep = parseInt(document.getElementById('rep').value, 10) * rep;
         let primeRepPlus = parseInt(document.getElementById('repPlus').value, 10) * repPlus;
 
         // Calcul nombre de points
@@ -194,13 +192,13 @@
                     break;
                 case 4: // Certifié-e ou PLP
                     // On compte 1,25 HSA pour les certifié-e-s si les primes sont intégrées
-                    nombrePoints = (salaireCumule + primeRep + primeRepPlus + primeIsoe + (hsaCertifie1 * annees) + ((hsaCertifie / 4.0) * annees)) * 0.02531;
+                    nombrePoints = (salaireCumule + primeRep + primeRepPlus + (isoe * annees) + (hsaCertifie1 * annees) + ((hsaCertifie / 4.0) * annees)) * 0.02531;
                     break;
                 case 5: // PE
-                    nombrePoints = (salaireCumule + salaireCumuleDirection + primeISS + primeIsae + primeRep + primeRepPlus) * 0.02531;
+                    nombrePoints = (salaireCumule + salaireCumuleDirection + primeISS + (isae * annees) + primeRep + primeRepPlus) * 0.02531;
                     break;
                 case 6: // Agrégé-e
-                    nombrePoints = (salaireCumule + primeRep + primeRepPlus + primeIsoe + (hsaAgrege1 * annees) + ((hsaAgrege / 4.0) * annees)) * 0.02531;
+                    nombrePoints = (salaireCumule + primeRep + primeRepPlus + (isoe * annees) + (hsaAgrege1 * annees) + ((hsaAgrege / 4.0) * annees)) * 0.02531;
                     break;
                 default:
                     nombrePoints = salaireCumule * 0.02531;
