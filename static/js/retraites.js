@@ -205,6 +205,10 @@
 	    //Arrondi au centime
 	    retraitePoints = Math.floor(retraitePoints * 100) / 100;
 	    //Ecriture de la pension dans le champ prévu à cet effet
+	    if (document.getElementById('statut').value < 4) {
+	        document.getElementById("resultatActuel-contractuel").innerHTML = "<i>Attention&nbsp;:</i> le calcul part du principe que votre carrière sera sans aucune interruption de contrat ni temps partiel contraint. La retraite brute dans votre cas sera sans doute plus basse.";
+	        document.getElementById("resultatPoints-contractuel").innerHTML = "<i>Attention&nbsp;:</i> le calcul part du principe que votre carrière sera sans aucune interruption de contrat ni temps partiel contraint. La retraite brute dans votre cas sera sans doute plus basse.";
+	    }
 	     if (retraitePoints < minimumRetraite * coefficientMinimumContributif){
 	    	    retraitePoints = minimumRetraite * coefficientMinimumContributif;
 	    	    document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite trop bas. Vous serez concerné-e par le minimum contributif (85% du SMIC proratisé en fonction du nombre d'années travaillées) : " + Math.floor(retraitePoints * 100) / 100 + " €";

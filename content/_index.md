@@ -319,6 +319,7 @@ draft: false
     </div>
 	<!--Balises d'accueil des résultats dans le système actuel -->
 	<h2 id="resultatActuel"></h2>
+	<p id="resultatActuel-contractuel"></p>
 	<p id="salaire"></p>
 	<p id="trimestresRequis"></p>
 	<p id="trimestresAcquis"></p>
@@ -326,6 +327,7 @@ draft: false
 
 	<!--Balises d'accueil des résultats dans le système à points -->
 	<h2 id="resultatPoint"></h2>
+	<p id="resultatPoints-contractuel"></p>
 	<p id="nombrePoints"></p>
 	<p id="agePivot"></p>
 	<p id="retraitePoints"></p>
