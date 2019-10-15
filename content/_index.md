@@ -20,7 +20,7 @@ draft: false
 	<div id="apparenceStatut">
     <div class="menuSelection">
 	
-<select name="Corps" id="statut" onchange=affichePrimes()>
+<select name="Corps" id="statut" onchange="afficheDirection();">
 			    <option value="0">ADJAENES</option>
 			    <option value="1">AESH</option>
 			    <option value="2">Contractuel-le enseignant-e (grille favorable, ex Paris)</option>
@@ -59,9 +59,30 @@ draft: false
 
 	<li>
 	        	<div class="blocSelection">
-    	<label for="direction_24">Nombre d'années chargé-e de direction dans une école de 2 à 4 classes&nbsp;:</label>
+    	<label for="direction_24">Nombre d'années chargé-e de direction dans une école de 2 à 3 classes&nbsp;:</label>
     <div class="menuSelection">
-			<select name="direction2a4classes" id="direction_24">	
+			<select name="direction2a3classes" id="direction_23">	
+			    <option value="0" selected>0 année</option>
+			    <option value="1">1 année</option>
+			    <option value="3">3 années</option>
+			    <option value="5">5 années</option>
+			    <option value="10">10 années</option>
+			    <option value="15">15 années</option>
+			    <option value="20">20 années</option>
+			    <option value="25">25 années</option>
+			    <option value="30">30 années</option>
+			    <option value="35">35 années</option>
+			    <option value="40">40 années</option>
+			   </select>
+			   </div>
+			   </div>
+	</li>
+	
+		<li>
+	        	<div class="blocSelection">
+    	<label for="direction_4">Nombre d'années chargé-e de direction dans une école de 4 classes&nbsp;:</label>
+    <div class="menuSelection">
+			<select name="direction4classes" id="direction_4">	
 			    <option value="0" selected>0 année</option>
 			    <option value="1">1 année</option>
 			    <option value="3">3 années</option>
@@ -225,8 +246,21 @@ draft: false
     </li>
 	</ul>
 	<div id="primes">
-	<h3>Et si on intégrait les primes ?</h3>
-	<p><i>Nous vous proposons de faire des simulations en intégrant les primes. Pour ne pas les prendre en compte, il suffit de laisser 0 dans le champ prévu. Ce dispositif n'est pas prévu dans le rapport Delevoye, mais il a été mis sur la table pour compenser les pertes de pension prévues dans la fonction publique. Faites-vous votre opinion avec ces simulations...</i></p>
+	<h3>Primes et indemnités</h3>
+	<p><i>Nous vous proposons de faire des simulations en intégrant les primes. Ce dispositif n'est pas prévu dans le rapport Delevoye, mais il a été mis sur la table pour compenser les pertes de pension prévues dans la fonction publique. Faites-vous votre opinion avec ces simulations...</i></p>
+	
+		<div class="blocSelection">
+	<label for="primesEtIndemnites">Faites votre opinion</label>
+    <div class="menuSelection">
+	
+<select name="Corps" id="primesEtIndemnites" onchange="affichePrimes();">
+			    <option value="0" selected>Ignorer les primes et indemnités</option>
+			    <option value="1">Prendre en compte les primes et indemnités</option>
+			   </select>
+    </div>
+    </div>
+	
+	<div id="affichePrimesIndemnites">
 	<p>
 	<ul class="formulaire">
 	    <li id="primeISOE">
@@ -312,6 +346,7 @@ draft: false
 	    </li>
 	</ul>
 	</p>
+	</div>
 	
 	</div>
 	<div class="boutonCalcul" >

@@ -1042,6 +1042,11 @@ h1 svg {
     margin-left: 0 !important; /* retire l'indentation des puces */
    }
 
+
+#affichePrimesIndemnites {
+    display: none;
+}
+
 #direction {
     display: none;
     list-style-type: none;
@@ -1049,9 +1054,9 @@ h1 svg {
     margin-left: 0 !important;
 }
 
-#primeISAE {
+/* #primeISAE {
         display: none;
-}
+} */
 
 
 

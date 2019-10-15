@@ -1,14 +1,14 @@
     function calcul() {
-    	/*Tableau de tableaux des indices pour chaque corps
-		indices[0] : indices des ADJAENES
-		indices[1] : indices des contractuels AESH
-		indices[2] : indices des contractuels Paris
-		indices[3] : indices des contractuels Amiens
-		indices[4] : indices des ceritifiés
-		indices[5] : indices des PE
-		indices[6] : indices des agrégés
-		etc.*/
-    		let indices = [[326,327,328,329,330,332,335,339,343,354,367,380,390,402,411,430,450,466],
+    /*Tableau de tableaux des indices pour chaque corps
+    indices[0] : indices des ADJAENES
+	indices[1] : indices des contractuels AESH
+	indices[2] : indices des contractuels Paris
+	indices[3] : indices des contractuels Amiens
+	indices[4] : indices des ceritifiés
+	indices[5] : indices des PE
+	indices[6] : indices des agrégés
+	etc.*/
+    let indices = [[326,327,328,329,330,332,335,339,343,354,367,380,390,402,411,430,450,466],
 	    	[325,330,334,340,346,340,346,352],
 	    	[410,431,453,475,498,523,548,573,598,623,650,680,710,741],
 	    	[367,388,410,431,453,475,498,523,548,573,598,623,650,680,710,741],
@@ -16,24 +16,28 @@
 	    	[388,441,445,458,471,483,511,547,583,625,669,710,756,798],
 	    	[448,498,502,539,574,609,651,700,750,796,830,890,925,972]];
 	    	//Durées des échelons selon la même numérotation
-	    	let dureesEchelons = [[1,2,2,2,2,2,2,2,3,3,3,2,3,3,4,3,3],
+	let dureesEchelons = [[1,2,2,2,2,2,2,2,3,3,3,2,3,3,4,3,3],
 	    	[3,3,3,3,3,3,3],
 	    	[3,3,3,3,3,3,3,3,3,3,3,3,5],
 	    	[1,1,2,2,2,3,3,3,3,3,3,3,3,3,3],
 	    	[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1],
 	    	[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1],
 	    	[1,1,2,2,2.5,3,3,3.5,4,4,4,1,1]];
-	    	let valeurPoint = 4.686;//Valeur du point d'indice
+	let valeurPoint = 4.686;//Valeur du point d'indice
 	    	//Bonifications indiciaires pour les directions d'écoles (en points d'indice)
-	    	let bonificationDirection1 = 11;//1 classe
-	    	let bonificationDirection2 = 24;//2 à 4 classes
-	    	let bonificationDirection3 = 38;//5 à 9 classes
-	    	let bonificationDirection4 = 48;//plus de 9 classes
+	let bonificationDirection1 = 11;//1 classe
+	let bonificationDirection2 = 24;//2 à 4 classes
+	let bonificationDirection3 = 38;//5 à 9 classes
+	let bonificationDirection4 = 48;//plus de 9 classes
 
 	    	let isoe = 1213.56;//prime annuelle d'orientation 2nd degré
 	    	let rep = 1734;
 	    	let repPlus = 3479;
 	    	let isae = 1213.56;//prime annuelle premier degré
+	    	let hsaAgrege1 = 1974.53; // 1re HSA Agrégé
+	    	let hsaAgrege = 1645.44; // HSA Agrégé en plus
+	    	let hsaCertifie1 = 1358.66; // 1re HSA certifié
+	    	let hsaCertifie = 1132.22; // HSA certifié en plus
             //Récupération de la valeur du bouton "corps" sélectionné
            let corps = parseInt(document.getElementById('statut').value, 10);
 
@@ -61,9 +65,11 @@
 
         //Calcul du dernier salaire dans la balise prévue à cet effet
         let dernierSalaire = valeurPoint*indices[corps][echelon - 1];
-        //Si deirection d'école
+        //Si direction d'école
+        let primeISS = 0; // Indm. Suj. Spéciale direction
         let anneesDirection1 = parseInt(document.getElementById('direction_1').value, 10);
-        let anneesDirection24 = parseInt(document.getElementById('direction_24').value, 10);
+        let anneesDirection23 = parseInt(document.getElementById('direction_23').value, 10);
+        let anneesDirection4 = parseInt(document.getElementById('direction_4').value, 10);
         let anneesDirection59 = parseInt(document.getElementById('direction_59').value, 10);
         let anneesDirection10 = parseInt(document.getElementById('direction_10Plus').value, 10);
         let bonificationSalarialeDirection = 0;
@@ -71,18 +77,27 @@
         if (anneesDirection1 != 0) {
         	bonificationSalarialeDirection = valeurPoint * bonificationDirection1;
         	salaireCumuleDirection += bonificationSalarialeDirection * anneesDirection1 * 12;
+        	primeISS += 149.63 * 12 * anneesDirection1;
         }
-        if (anneesDirection24 != 0) {
+        if (anneesDirection23 != 0) {
+        	bonificationSalarialeDirection = valeurPoint * bonificationDirection2;
+        	salaireCumuleDirection += bonificationSalarialeDirection * anneesDirection23 * 12;
+        	primeISS += 149.63 * 12 * anneesDirection23;
+        }
+        if (anneesDirection4 != 0) {
         	bonificationSalarialeDirection = valeurPoint * bonificationDirection2;
         	salaireCumuleDirection += bonificationSalarialeDirection * anneesDirection24 * 12;
+        	primeISS += 166.30 * 12 * anneesDirection4;
         }
         if (anneesDirection59 != 0) {
         	bonificationSalarialeDirection = valeurPoint * bonificationDirection3;
         	salaireCumuleDirection += bonificationSalarialeDirection * anneesDirection59 * 12;
+        	primeISS += 166.30 * 12 * anneesDirection59;
         }
         if (anneesDirection10 != 0) {
         	bonificationSalarialeDirection = valeurPoint * bonificationDirection4;
         	salaireCumuleDirection += bonificationSalarialeDirection * anneesDirection10 * 12;
+        	primeISS += 166.30 * 12 * anneesDirection10;
         }
         dernierSalaire += bonificationSalarialeDirection;
 
@@ -135,13 +150,49 @@
 	    //Affichage du titre 
 	    document.getElementById('resultatPoint').innerHTML = "Retraite dans le système à points (Delevoye)";
 
+	    annees = ageFinCarriere - ageDebutCarriere;
+	    
 	    //Intégration des primes
 	    let primeIsoe = parseInt(document.getElementById('isoe').value, 10) * isoe;
 	    let primeIsae = parseInt(document.getElementById('isoe').value, 10) * isae;
 	    let primeRep = parseInt(document.getElementById('rep').value, 10) * rep;
 	    let primeRepPlus = parseInt(document.getElementById('repPlus').value, 10) * repPlus;
-	    //calcul du nombre de points
-	    let nombrePoints = (salaireCumule + salaireCumuleDirection + primeIsoe + primeIsae + primeRep + primeRepPlus) * 0.02531 ;
+
+// Calcul nombre de points
+let nombrePoints = 0;
+if (parseInt(document.getElementById('primesEtIndemnites').value, 10) == 1) {
+switch ( corps) {
+    case 0: // Adjaenes
+        nombrePoints = (salaireCumule + primeRep + primeRepPlus) * 0.02531 ;
+        break;
+    case 1: // AESH
+        nombrePoints = salaireCumule * 0.02531 ;
+        break;
+    case 2: // Contractuel-le grille favorable
+        nombrePoints = (salaireCumule + primeRep + primeRepPlus) * 0.02531;
+        break;
+    case 3: // Contractuel-le grille défavorable
+        nombrePoints = (salaireCumule + primeRep + primeRepPlus) * 0.02531;
+        break;
+    case 4: // Certifié-e ou PLP
+        // On compte 1,25 HSA pour les certifié-e-s si les primes sont intégrées
+            nombrePoints = (salaireCumule + primeRep + primeRepPlus + primeIsoe + (hsaCertifie1 * annees) + ( (hsaCertifie / 4.0) * annees) ) * 0.02531;
+        break;
+     case 5: // PE
+        nombrePoints = (salaireCumule + salaireCumuleDirection + primeISS + primeIsae + primeRep + primeRepPlus) * 0.02531;
+        break;
+     case 6: // Agrégé-e
+        nombrePoints = (salaireCumule + primeRep + primeRepPlus + primeIsoe + (hsaAgrege1 * annees) + ( (hsaAgrege / 4.0) * annees) ) * 0.02531;
+        break;
+     default:
+        nombrePoints = salaireCumule * 0.02531 ;
+}
+} else {
+    nombrePoints = (salaireCumule + salaireCumuleDirection) * 0.02531 ;
+}
+
+
+
 	    //Arrondi 
 	    nombrePoints = Math.floor(nombrePoints);
 	    //Ecriture du nombre de point dans le champ prévu
@@ -157,10 +208,9 @@
 	    }
 	    //Affichage de l'âge pivot
 	    document.getElementById("agePivot").innerHTML ="Age du taux plein (âge pivot) : " + agePivot;
-	    // La décote est de 5% / an
-	    let coefficientDecote = 0.05;
-	    // Valeur de service du point prévue dans le rapport Delevoye
-	    let valeurServicePoints = 0.55;
+	    
+	    let coefficientDecote = 0.05; // La décote est de 5% / an
+	    let valeurServicePoints = 0.55; // Valeur de service du point prévue dans le rapport Delevoye
 	    let decotePoints = 1 - (agePivot - ageFinCarriere) * coefficientDecote;
 
 	    // Le calcul de la retraite à points mensuelle est le suivant :
@@ -176,7 +226,7 @@
 	    // Le minimum contributif est distinct de l'ASPA (minimum vieillesse)
 	    // Fixé à 43 ans au minimum, puis augmente avec l'espérance de vie projetée.
 	    
-	    annees = ageFinCarriere - ageDebutCarriere;
+
 	    
 	    let annuitesrequises = 43;
 	    if (agePivot > 64) {
@@ -194,13 +244,6 @@
 	    	    if (retraitePoints < minimumRetraite * coefficientMinimumContributif){
 	    	    retraitePoints = minimumRetraite * coefficientMinimumContributif;
 	    }
-// Minimum vieillesse
-	    // Les prélèvements sur les retraites sont en général de 7,4 %
-//	    let prelevementsRetraite = 0.074;
-	    
-//	    if (retraitePoints < 995.34 / 0.926 ) {
-//	        retraitePoints = 995.34 / 0.926;
-//	    }
 
 	    //Arrondi au centime
 	    retraitePoints = Math.floor(retraitePoints * 100) / 100;
