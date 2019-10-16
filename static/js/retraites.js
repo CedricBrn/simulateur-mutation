@@ -27,21 +27,38 @@
             [1, 1, 2, 2, 2.5, 3, 3, 3.5, 4, 4, 4, 1, 1],
             [1, 1, 2, 2, 2.5, 3, 3, 3.5, 4, 4, 4, 1, 1]
         ];
-        let valeurPoint = 4.686; //Valeur du point d'indice
+        
+        /* Variables utiles au calcul dans le système actuel */
+        const coeffDecoteActuel = 0.0125; // Décote à 1,25% par trimestre dans le système actuel
+        const plafondSalaireBrutFonctionnaireActuel = 0.75; // 75% du salaire des 6 derniers mois 
+        const minimumContributifActuel = 695.59; // Le minimum contributif dans le système actuel
+
+        /* Variables utiles au système du rapport Delevoye */
+        const valeurPoint = 4.686; //Valeur du point d'indice
+        const coefficientDecote = 0.05; // La décote est de 5% / an
+        const valeurServicePoints = 0.55; // Valeur de service du point prévue dans le rapport Delevoye
+        const montantCotisationsSociales = 0.02531; // Montant des cotisations sociales dans le rapport Delevoye : 25,31%
+        const tauxMinimumContributif = 0.85; // Taux du minimum contributif dans le rapport Delevoye : 85% du Smic net
+        let smicNet = 1202.92; // Laissé variable car on peut jouer à calculer avec inflation
+
+        /* Primes et indemnités */
+        const isoe = 1213.56; // Indemnité de suivi et d'orientation 2d degré
+        const isae = 1213.56; //Indemnité de suivi premier degré
+        const rep = 1734; // Prime Rep
+        const repPlus = 3479; // Prime Rep+
+        const hsaAgrege1 = 1974.53; // 1re HSA Agrégé
+        const hsaAgrege = 1645.44; // HSA Agrégé en plus
+        const hsaCertifie1 = 1358.66; // 1re HSA certifié
+        const hsaCertifie = 1132.22; // HSA certifié en plus
+        let primeISS = 0; // Indm. Suj. Spéciale direction, varie en fonction du nombre de classes
+
+
         //Bonifications indiciaires pour les directions d'écoles (en points d'indice)
         let bonificationDirection1 = 11; //1 classe
         let bonificationDirection2 = 24; //2 à 4 classes
         let bonificationDirection3 = 38; //5 à 9 classes
         let bonificationDirection4 = 48; //plus de 9 classes
 
-        let isoe = 1213.56; //prime annuelle d'orientation 2nd degré
-        let rep = 1734;
-        let repPlus = 3479;
-        let isae = 1213.56; //prime annuelle premier degré
-        let hsaAgrege1 = 1974.53; // 1re HSA Agrégé
-        let hsaAgrege = 1645.44; // HSA Agrégé en plus
-        let hsaCertifie1 = 1358.66; // 1re HSA certifié
-        let hsaCertifie = 1132.22; // HSA certifié en plus
         //Récupération de la valeur du bouton "corps" sélectionné
         let corps = parseInt(document.getElementById('statut').value, 10);
 
@@ -70,7 +87,6 @@
         //Calcul du dernier salaire dans la balise prévue à cet effet
         let dernierSalaire = valeurPoint * indices[corps][echelon - 1];
         //Si direction d'école
-        let primeISS = 0; // Indm. Suj. Spéciale direction
         let anneesDirection1 = parseInt(document.getElementById('direction_1').value, 10);
         let anneesDirection23 = parseInt(document.getElementById('direction_23').value, 10);
         let anneesDirection4 = parseInt(document.getElementById('direction_4').value, 10);
@@ -108,7 +124,7 @@
         //Arrondi au centime
         dernierSalaire = Math.floor(dernierSalaire * 100) / 100;
         //Ecriture du dernier salaire dans la balise prévue à cet effet
-        document.getElementById('salaire').innerHTML = " Dernier salaire : " + dernierSalaire + " €";
+        document.getElementById('salaire').innerHTML = " Dernier salaire : " + dernierSalaire + "&nbsp;€";
 
         //Calcul du nombre d'annuités
         let annuites = ageFinCarriere - ageDebutCarriere;
@@ -142,14 +158,17 @@
         document.getElementById("trimestresRequis").innerHTML = "Nombre de trimestres requis : " + trimestresRequis;
         //Ecriture du nombre de trimestres acquis
         document.getElementById("trimestresAcquis").innerHTML = "Nombre de trimestres acquis : " + trimestresAcquis;
-        let decote = 1 - (trimestresRequis - trimestresAcquis) * 0.0125;
-        let pensionRepartition = dernierSalaire * 0.75 * decote * trimestresAcquis / trimestresRequis;
+        
+        // Calcul de la décote dans le système actuel
+        let decote = 1 - (trimestresRequis - trimestresAcquis) * coeffDecoteActuel;
+
+        // Calcul de la pension dans le système actuel
+        let pensionRepartition = dernierSalaire * plafondSalaireBrutFonctionnaireActuel * decote * trimestresAcquis / trimestresRequis;
         //Arrondi au centime
         pensionRepartition = Math.floor(pensionRepartition * 100) / 100;
 
 
-        // Actuel minimum contributif
-        let minimumRetraiteRepartition = 695.59;
+        // Calcul du minimum contributif actuellement
         let coefficientMinRepartition;
 
         if (trimestresAcquis >= trimestresRequis) {
@@ -159,8 +178,8 @@
         }
 
         //Ecriture de la pension dans le champ prévu à cet effet
-        if (pensionRepartition < minimumRetraiteRepartition * coefficientMinRepartition) {
-            pensionRepartition = minimumRetraiteRepartition * coefficientMinRepartition;
+        if (pensionRepartition < minimumContributifActuel * coefficientMinRepartition) {
+            pensionRepartition = minimumContributifActuel * coefficientMinRepartition;
             document.getElementById("retraiteRepartition").innerHTML = "Montant mensuel brut de la retraite trop bas. Vous serez au minimum contributif : " + pensionRepartition + "€";
         } else {
             document.getElementById("retraiteRepartition").innerHTML = "Montant mensuel brut de la retraite : " + pensionRepartition + "€";
@@ -171,7 +190,7 @@
         annees = ageFinCarriere - ageDebutCarriere;
 
         //Intégration des primes
-                let primeRep = parseInt(document.getElementById('rep').value, 10) * rep;
+        let primeRep = parseInt(document.getElementById('rep').value, 10) * rep;
         let primeRepPlus = parseInt(document.getElementById('repPlus').value, 10) * repPlus;
 
         // Calcul nombre de points
@@ -179,32 +198,32 @@
         if (parseInt(document.getElementById('primesEtIndemnites').value, 10) == 1) {
             switch (corps) {
                 case 0: // Adjaenes
-                    nombrePoints = (salaireCumule + primeRep + primeRepPlus) * 0.02531;
+                    nombrePoints = (salaireCumule + primeRep + primeRepPlus) * montantCotisationsSociales;
                     break;
                 case 1: // AESH
-                    nombrePoints = salaireCumule * 0.02531;
+                    nombrePoints = salaireCumule * montantCotisationsSociales;
                     break;
                 case 2: // Contractuel-le grille favorable
-                    nombrePoints = (salaireCumule + primeRep + primeRepPlus) * 0.02531;
+                    nombrePoints = (salaireCumule + primeRep + primeRepPlus) * montantCotisationsSociales;
                     break;
                 case 3: // Contractuel-le grille défavorable
-                    nombrePoints = (salaireCumule + primeRep + primeRepPlus) * 0.02531;
+                    nombrePoints = (salaireCumule + primeRep + primeRepPlus) * montantCotisationsSociales;
                     break;
                 case 4: // Certifié-e ou PLP
                     // On compte 1,25 HSA pour les certifié-e-s si les primes sont intégrées
-                    nombrePoints = (salaireCumule + primeRep + primeRepPlus + (isoe * annees) + (hsaCertifie1 * annees) + ((hsaCertifie / 4.0) * annees)) * 0.02531;
+                    nombrePoints = (salaireCumule + primeRep + primeRepPlus + (isoe * annees) + (hsaCertifie1 * annees) + ((hsaCertifie / 4.0) * annees)) * montantCotisationsSociales;
                     break;
                 case 5: // PE
-                    nombrePoints = (salaireCumule + salaireCumuleDirection + primeISS + (isae * annees) + primeRep + primeRepPlus) * 0.02531;
+                    nombrePoints = (salaireCumule + salaireCumuleDirection + primeISS + (isae * annees) + primeRep + primeRepPlus) * montantCotisationsSociales;
                     break;
                 case 6: // Agrégé-e
-                    nombrePoints = (salaireCumule + primeRep + primeRepPlus + (isoe * annees) + (hsaAgrege1 * annees) + ((hsaAgrege / 4.0) * annees)) * 0.02531;
+                    nombrePoints = (salaireCumule + primeRep + primeRepPlus + (isoe * annees) + (hsaAgrege1 * annees) + ((hsaAgrege / 4.0) * annees)) * montantCotisationsSociales;
                     break;
                 default:
-                    nombrePoints = salaireCumule * 0.02531;
+                    nombrePoints = salaireCumule * montantCotisationsSociales;
             }
         } else {
-            nombrePoints = (salaireCumule + salaireCumuleDirection) * 0.02531;
+            nombrePoints = (salaireCumule + salaireCumuleDirection) * montantCotisationsSociales;
         }
 
 
@@ -225,8 +244,7 @@
         //Affichage de l'âge pivot
         document.getElementById("agePivot").innerHTML = "Age du taux plein (âge pivot) : " + agePivot;
 
-        let coefficientDecote = 0.05; // La décote est de 5% / an
-        let valeurServicePoints = 0.55; // Valeur de service du point prévue dans le rapport Delevoye
+
         let decotePoints = 1 - (agePivot - ageFinCarriere) * coefficientDecote;
 
         // Le calcul de la retraite à points mensuelle est le suivant :
@@ -234,15 +252,11 @@
         let retraitePoints = nombrePoints * decotePoints * valeurServicePoints / 12;
 
         // Sera-t-on à la retraite minimum revalorisée ?
-        let smicNet = 1202.92;
-        let tauxMinimumContributif = 0.85;
         let minimumRetraite = smicNet * tauxMinimumContributif;
 
         // Nombre minimal d'années contisées pour bénéficier du minimum contributif
         // Le minimum contributif est distinct de l'ASPA (minimum vieillesse)
         // Fixé à 43 ans au minimum, puis augmente avec l'espérance de vie projetée.
-
-
 
         let annuitesrequises = 43;
         if (agePivot > 64) {
@@ -272,7 +286,7 @@
             retraitePoints = minimumRetraite * coefficientMinimumContributif;
             document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite trop bas. Vous serez concerné-e par le minimum contributif (85% du SMIC proratisé en fonction du nombre d'années travaillées) : " + Math.floor(retraitePoints * 100) / 100 + " €";
         } else {
-            document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite : " + retraitePoints + " €";
+            document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite : " + retraitePoints + "&nbsp;€";
         }
 
         //calcul des pertes mensuelles
@@ -281,13 +295,13 @@
         pertesMensuelles = Math.floor(pertesMensuelles * 100) / 100;
         if (pertesMensuelles > 0) {
             //Ecriture des pertes mensuelles dans le champ prévu
-            document.getElementById("pertesMensuelles").innerHTML = "<b>Pertes avec le système à points : " + pertesMensuelles + " € par mois. </b>";
+            document.getElementById("pertesMensuelles").innerHTML = "<b>Pertes avec le système à points : " + pertesMensuelles + "&nbsp;€ par mois. </b>";
             //calcul des pertes annuelles
             let pertesAnnuelles = 12 * pertesMensuelles;
             //Arrondi au centime
             pertesAnnuelles = Math.floor(pertesAnnuelles * 100) / 100;
             //Ecriture des pertes mensuelles dans le champ prévu
-            document.getElementById("pertesAnnuelles").innerHTML = "<b>Pertes avec le système à points : " + pertesAnnuelles + " € par an. </b>";
+            document.getElementById("pertesAnnuelles").innerHTML = "<b>Pertes avec le système à points : " + pertesAnnuelles + "&nbsp;€ par an. </b>";
         }
 
         //Remarques sur les simulations

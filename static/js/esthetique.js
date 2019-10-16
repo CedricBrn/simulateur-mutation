@@ -2,7 +2,7 @@ function affichePrimes() {
     if (parseInt(document.getElementById('primesEtIndemnites').value) == 1) {
 
         document.getElementById('affichePrimesIndemnites').style.display = 'block';
-        num = document.getElementById('statut').value;
+        let num = document.getElementById('statut').value;
         if (num == 1) {
             document.getElementById('primes').style.display = 'none';
         } else {
