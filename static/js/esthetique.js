@@ -1,5 +1,5 @@
 function affichePrimes() {
-    if (parseInt(document.getElementById('primesEtIndemnites').value) == 1) {
+    if (parseInt(document.getElementById('primesEtIndemnites').value, 10) == 1) {
 
         document.getElementById('affichePrimesIndemnites').style.display = 'block';
         let num = document.getElementById('statut').value;
@@ -27,7 +27,7 @@ function affichePrimes() {
 }
 
 function afficheDirection() {
-    if (parseInt(document.getElementById('statut').value) == 5) {
+    if (parseInt(document.getElementById('statut').value, 10) == 5) {
 
         document.getElementById('direction').style.display = 'block';
     } else {

@@ -28,10 +28,22 @@
             [1, 1, 2, 2, 2.5, 3, 3, 3.5, 4, 4, 4, 1, 1]
         ];
         
+
+        //Récupération de la valeur du bouton "corps" sélectionné
+        let corps = parseInt(document.getElementById('statut').value, 10);
+
+        // Vérifier si agent-e est contractuel-le
+        estContractuel = false;
+        if (corps == 1 || corps == 2 || corps == 3 ) {
+            estContractuel = true;
+        }
+
         /* Variables utiles au calcul dans le système actuel */
         const coeffDecoteActuel = 0.0125; // Décote à 1,25% par trimestre dans le système actuel
         const plafondSalaireBrutFonctionnaireActuel = 0.75; // 75% du salaire des 6 derniers mois 
+        const plafondSalaireBrutContractuelActuel = 0.75; // On considère qu'avec intégration des primes et indemnités, et le remplacement à 50%, les contractuels arrivent à 75% des 25 meilleures années
         const minimumContributifActuel = 695.59; // Le minimum contributif dans le système actuel
+        const moyenneSalaireContractuelAnnees = 25;
 
         /* Variables utiles au système du rapport Delevoye */
         const valeurPoint = 4.686; //Valeur du point d'indice
@@ -60,9 +72,9 @@
         let bonificationDirection4 = 48; //plus de 9 classes
 
         //Récupération de la valeur du bouton "corps" sélectionné
-        let corps = parseInt(document.getElementById('statut').value, 10);
+        corps = parseInt(document.getElementById('statut').value, 10);
 
-        //On récupère les âges de début et de fin de cariière
+        //On récupère les âges de début et de fin de carière
         let ageDebutCarriere = parseInt(document.getElementById('debut').value, 10);
         let ageFinCarriere = parseInt(document.getElementById('fin').value, 10);
 
@@ -70,13 +82,14 @@
         let echelon = 0;
         let ageCumule = ageDebutCarriere;
         let salaireCumule = 0;
+        let dureeDernierEchelon = 0;
         while (ageCumule < ageFinCarriere && echelon < dureesEchelons[corps].length) {
             ageCumule += dureesEchelons[corps][echelon];
             salaireCumule += 12 * dureesEchelons[corps][echelon] * valeurPoint * indices[corps][echelon];
             echelon++;
         }
         if (ageFinCarriere - ageCumule > 0) {
-            let dureeDernierEchelon = ageFinCarriere - ageCumule;
+            dureeDernierEchelon = ageFinCarriere - ageCumule;
             echelon++;
             salaireCumule += 12 * dureeDernierEchelon * valeurPoint * indices[corps][echelon - 1];
         }
@@ -162,8 +175,28 @@
         // Calcul de la décote dans le système actuel
         let decote = 1 - (trimestresRequis - trimestresAcquis) * coeffDecoteActuel;
 
-        // Calcul de la pension dans le système actuel
-        let pensionRepartition = dernierSalaire * plafondSalaireBrutFonctionnaireActuel * decote * trimestresAcquis / trimestresRequis;
+        let pensionRepartition = 0;
+
+        if (estContractuel == false) {
+            // Calcul de la pension dans le système actuel pour les fonctionnaires
+            pensionRepartition = dernierSalaire * plafondSalaireBrutFonctionnaireActuel * decote * trimestresAcquis / trimestresRequis;
+        } else {
+            // Calcul de la pension dans le système actuel pour les contractuel-le-s
+            let parcoursCarriere = moyenneSalaireContractuelAnnees;
+            if (annuites < moyenneSalaireContractuelAnnees) {
+                parcoursCarriere = annuites;
+            }
+            let salaireCumuleContractuel = dureeDernierEchelon * valeurPoint * indices[corps][echelon - 1];
+            parcoursCarriere -= dureeDernierEchelon;
+            echelon -= 2; // Permet de s'assurer que la boucle démarre au dernier échelon
+            while (parcoursCarriere > 0 && echelon >= 0) {
+                salaireCumuleContractuel = salaireCumuleContractuel + ( 12 * valeurPoint * indices[corps][echelon] * dureesEchelons[corps][echelon] );
+                parcoursCarriere -= dureesEchelons[corps][echelon];
+                echelon--;
+           }
+           pensionRepartition = (salaireCumuleContractuel / 12 / moyenneSalaireContractuelAnnees)  * plafondSalaireBrutContractuelActuel * decote * trimestresAcquis / trimestresRequis;
+        }
+
         //Arrondi au centime
         pensionRepartition = Math.floor(pensionRepartition * 100) / 100;
 
@@ -180,6 +213,9 @@
         //Ecriture de la pension dans le champ prévu à cet effet
         if (pensionRepartition < minimumContributifActuel * coefficientMinRepartition) {
             pensionRepartition = minimumContributifActuel * coefficientMinRepartition;
+            pensionRepartition = Math.floor(pensionRepartition * 100) / 100;
+
+
             document.getElementById("retraiteRepartition").innerHTML = "Montant mensuel brut de la retraite trop bas. Vous serez au minimum contributif : " + pensionRepartition + "€";
         } else {
             document.getElementById("retraiteRepartition").innerHTML = "Montant mensuel brut de la retraite : " + pensionRepartition + "€";
@@ -254,7 +290,7 @@
         // Sera-t-on à la retraite minimum revalorisée ?
         let minimumRetraite = smicNet * tauxMinimumContributif;
 
-        // Nombre minimal d'années contisées pour bénéficier du minimum contributif
+        // Nombre minimal d'années cotisées pour bénéficier du minimum contributif
         // Le minimum contributif est distinct de l'ASPA (minimum vieillesse)
         // Fixé à 43 ans au minimum, puis augmente avec l'espérance de vie projetée.
 
@@ -290,7 +326,9 @@
         }
 
         //calcul des pertes mensuelles
+        
         let pertesMensuelles = pensionRepartition - retraitePoints;
+        console.log('pertesMensuelles = ' + pertesMensuelles + '\n pensionRepartition' + pensionRepartition +'\n retraitePoints' + retraitePoints);
         //Arrondi au centime
         pertesMensuelles = Math.floor(pertesMensuelles * 100) / 100;
         if (pertesMensuelles > 0) {
