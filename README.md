@@ -8,6 +8,21 @@ Le simulateur dont le code est proposé ici est adapté avant tout à l’Éduca
 
 L’objectif principal du simulateur est de montrer la différence de pension le système actuel, et le régime proposé par Delevoye.
 
+
+
+### Ce que le simulateur fait
+
+Il prend en compte :
+
+- une carrière standard de fonctionnaire en fonction du corps ;
+- une carrière de contractuel-le en fonction d’une grille indiciaire déterminée ;
+- le minimum contributif dans l’ancien système et celui issu du rapport Delevoye ;
+- différents âges de début et de fin de carrière ;
+- les évolutions prévisibles de l’âge de départ sans décote ;
+- la possibilité de prise en compte de certaines primes répandues chez les personnels.
+
+
+
 ### Hypothèses tirées du rapport Delevoye
 
 Le simulateur part des hypothèses suivantes :
@@ -102,7 +117,7 @@ draft: false
 
 - draft: il faut mettre à **false** pour être certain-e que le site sera généré avec la page.
 
-Pour éviter d'avoir à copier/coller ces lignes, on peut créer un post en tapant simplement depuis la racinse du site :
+Pour éviter d'avoir à copier/coller ces lignes, on peut créer un post en tapant simplement depuis la racine du site :
 
 ```sh
 hugo new content/nomdelarticle.md
@@ -126,6 +141,11 @@ La logique de masquage et affichage des différents menus est implémentée dans
 
 ## L’algorithme
 
-L’algorithme compare essentiellement la différnece de revenu projeté entre le système actuel et le système par points annoncé par Delevoye.
+L’algorithme compare essentiellement la différence de revenu projeté entre le système actuel et le système par points annoncé par Delevoye.
 
-L’implémentation se trouve dans `static/js/retraites.js`. Le code est documenté au maximum pour permettre sa réutilisation. Si des paramètres devaient changer, il est possible d'ajuster la logique.
+L’implémentation se trouve dans `static/js/retraites.js`. Le code est documenté au maximum pour permettre sa réutilisation.
+
+Les variables utiles sont déclarées en début de script pour permettre au maximum une appropriation de la logique du code.
+
+Si des paramètres devaient changer, il est possible d'ajuster la logique.
+
