@@ -1,4 +1,58 @@
-# Minisite retraites
+# Lignes directrices du simulateur retraites
+
+Le simulateur dont le code est proposé ici est adapté avant tout à l’Éducation nationale.
+
+
+
+## Objectifs
+
+L’objectif principal du simulateur est de montrer la différence de pension le système actuel, et le régime proposé par Delevoye.
+
+### Hypothèses tirées du rapport Delevoye
+
+Le simulateur part des hypothèses suivantes :
+
+- le montant total des cotisations patronales et salariales s’élève à 25,31% ;
+- 1 € cotisé = 10 points ;
+- La valeur de service du point est de 0,55€ / point ;
+- certaines primes et indemnités (les plus courantes) peuvent être intégrées.
+
+
+
+### Principales limites
+
+Ce que le simulateur ne fait pas :
+
+- faire une projection individuelle prenant en compte les situations individuelles ;
+- prendre en compte les heurts de carrière (temps partiels, disponibilités ou congés sans soldes) ;
+- prendre compte la transition entre l’ancien et l’hypothétique système Delevoye.
+- prendre en compte le handicap.
+- prendre en compte les carrières de droit privé ;
+- prendre en compte les carrières de polypensionné-e-s (ex : régime général et MSA).
+
+Pour les contractuel-le-s de droit public, le postulat est le suivant : le montant de la pension de retraite dans le régime général + régime complémentaire actuels est jugé correspondre à un taux plafond de 75% du salaire brut moyen des 25 dernières années.
+
+
+
+Les éléments qui ont conduit à ces décisions sont les suivants.
+
+En premier lieu, augmenter le nombre de prise en compte de cas particuliers se traduit par une complexification croissante du code et une augmentation en parallèle du risque d’erreurs.  Nous n’avons pas les compétences nécessaires pour assumer le coût en temps de la prise en charge de cette complexité.
+
+En deuxième lieu, les utilisateur-ices doivent être guidé-es par un processus le plus court possible afin que l’outil soit réellement utilisé. Nous avons en conséquence volontairement limité les entrées de l’utilisateur-ice au strict minimum.
+
+En troisième et dernier lieu, l’enjeu est avant tout en terme de propagande : montrer il s’agit de montrer la différence entre l’ancien et le nouveau système pour des carrières types. Il s’agit avant tout de faire apparaître rapidement, de manière personnalisée, les pertes typiques pour les personnels, par mois et par année pour l’ordre de grandeur.
+
+
+
+*Les limitations sont donc nombreuses, et le simulateur doit donc être pris pour ce qu’il est : un outil réfléchi et honnête dans les hypothèses formulées, mais dont l’objet est avant tout de produire une propagande — qu’il s’agisse de diriger les personnels vers l’outil pour qu’ils et elles se fassent une idée, ou bien de produire rapidement des exemples pour la propagande écrite, avec une capacité à modifier l’outil sans trop de difficultés si les paramètres venaient à changer.*
+
+
+
+
+
+
+
+# Aspects techniques
 
 ## Pré-requis
 

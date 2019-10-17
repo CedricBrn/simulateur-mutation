@@ -48,7 +48,7 @@
         const valeurPoint = 4.686; //Valeur du point d'indice
         const coefficientDecote = 0.05; // La décote est de 5% / an
         const valeurServicePoints = 0.55; // Valeur de service du point prévue dans le rapport Delevoye
-        const montantCotisationsSociales = 0.02531; // Montant des cotisations sociales dans le rapport Delevoye : 25,31%
+        const montantCotisationsSociales = 0.02531; // Montant des cotisations sociales dans le rapport Delevoye : 25,31% en partant du principe que 10€ = 1 pt
         const tauxMinimumContributif = 0.85; // Taux du minimum contributif dans le rapport Delevoye : 85% du Smic net
         let smicNet = 1202.92; // Laissé variable car on peut jouer à calculer avec inflation
 
