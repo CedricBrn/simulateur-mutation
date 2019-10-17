@@ -31,7 +31,6 @@
 
         //Récupération de la valeur du bouton "corps" sélectionné
         let corps = parseInt(document.getElementById('statut').value, 10);
-
         // Vérifier si agent-e est contractuel-le
         estContractuel = false;
         if (corps == 1 || corps == 2 || corps == 3 ) {
