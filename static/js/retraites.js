@@ -136,7 +136,7 @@
         //Arrondi au centime
         dernierSalaire = Math.floor(dernierSalaire * 100) / 100;
         //Ecriture du dernier salaire dans la balise prévue à cet effet
-        document.getElementById('salaire').innerHTML = " Dernier salaire : " + dernierSalaire + "&nbsp;€";
+        document.getElementById('salaire').innerHTML = " Dernier salaire mensuel brut&nbsp;: " + dernierSalaire + "&nbsp;€";
 
         //Calcul du nombre d'annuités
         let annuites = ageFinCarriere - ageDebutCarriere;
