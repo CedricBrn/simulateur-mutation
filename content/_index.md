@@ -4,6 +4,7 @@ date: 2019-10-12T08:08:47+02:00
 draft: false
 ---
 
+⚠ *Le simulateur est prévu pour des carrières entamées relativement jeune et poursuivies à leur terme. C’est pourquoi l'âge de début de carrière est limité à 28 ans. Si vous avez été par exemple assistant-e d'éducation avant d'être enseignant-e, le simulateur sera bien plus proche de la réalité en faisant commencer votre carrière au début de votre période de travail comme AED.*
 
 {{< rawhtml >}}
 
@@ -147,35 +148,13 @@ draft: false
                 <select name="ageDebutCarriere" id="debut">
 			    <option value="20">20 ans</option>
 			    <option value="21">21 ans</option>
-			    <option value="22">22 ans</option>
-			    <option value="23" selected>23 ans</option>
+			    <option value="22" selected>22 ans</option>
+			    <option value="23">23 ans</option>
 			    <option value="24">24 ans</option>
 			    <option value="25">25 ans</option>
 			    <option value="26">26 ans</option>
 			    <option value="27">27 ans</option>
 			    <option value="28">28 ans</option>
-			    <option value="29">29 ans</option>
-			    <option value="30">30 ans</option>
-			    <option value="31">31 ans</option>
-			    <option value="32">32 ans</option>
-			    <option value="33">33 ans</option>
-			    <option value="34">34 ans</option>
-			    <option value="35">35 ans</option>
-			    <option value="36">36 ans</option>
-			    <option value="37">37 ans</option>
-			    <option value="38">38 ans</option>
-			    <option value="39">39 ans</option>
-			    <option value="40">40 ans</option>
-			    <option value="41">41 ans</option>
-			    <option value="42">42 ans</option>
-			    <option value="43">43 ans</option>
-			    <option value="44">44 ans</option>
-			    <option value="45">45 ans</option>
-			    <option value="46">46 ans</option>
-			    <option value="47">47 ans</option>
-			    <option value="48">48 ans</option>
-			    <option value="49">49 ans</option>
-			    <option value="50">50 ans</option>
 			   </select>
             </div>
         </div>
