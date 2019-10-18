@@ -1,13 +1,19 @@
 ---
-title: "Matériel"
-date: 2019-10-12T16:10:55+02:00
+title: "Matériel d’information"
+date: 2019-10-12T15:10:55+02:00
 draft: false
 ---
 
-## Tract 4-pages d’information
+
+## Tract recto-verso
 
 *Pour télécharger le pdf, cliquez sur l'image.*
 
+[![Tract retraites 5 décembre recto-verso](Tract5decembre.png)](Tract5decembre.pdf)
 
+## Tract 4 pages
 
- [![4 pages retraites 5 décembre](tract-retraites-5-decembre-4pages-v1-barre2.png)](tract-retraites-5-decembre-4pages-v1-barre.pdf)
+*Pour télécharger le pdf, cliquez sur l'image.*
+
+[![Tract retraites 5 décembre 4 pages](Tract5decembre4pages.png)](Tract5decembre4pages.pdf)
+
