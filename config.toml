@@ -18,7 +18,7 @@ enableGitInfo = true
 
 [params]
   description = "Site d’information sur les retraites de la fédération SUD éducation"
-  homeMetaContent = "Site d'information sur les retraites de la fédération SUD éducation, simulation de départs à la retraite sur la base du rapport Delevoye, matériel de mobilisation : tracts, brochures d'information"
+  homeMetaContent = "Site d'information sur les retraites de la fédération SUD éducation, simulation de départs à la retraite sur la base du rapport Delevoye, matériel de mobilisation : tracts, brochures d'information, simulateur de retraites"
   footer = "[Fédération SUD éducation](https://www.sudeducation.org/), 2019"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
