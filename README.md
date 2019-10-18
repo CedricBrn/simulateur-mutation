@@ -28,7 +28,7 @@ Il prend en compte :
 Le simulateur part des hypothèses suivantes :
 
 - le montant total des cotisations patronales et salariales s’élève à 25,31% ;
-- 1 € cotisé = 10 points ;
+- 10 € cotisé = 1 point ;
 - La valeur de service du point est de 0,55€ / point ;
 - certaines primes et indemnités (les plus courantes) peuvent être intégrées.
 
@@ -38,7 +38,7 @@ Le simulateur part des hypothèses suivantes :
 
 Ce que le simulateur ne fait pas :
 
-- faire une projection individuelle prenant en compte les situations individuelles ;
+- faire une projection individuelle prenant en compte les situations individuelles ;
 - prendre en compte les heurts de carrière (temps partiels, disponibilités ou congés sans soldes) ;
 - prendre compte la transition entre l’ancien et l’hypothétique système Delevoye.
 - prendre en compte le handicap.
