@@ -28,7 +28,7 @@ Il prend en compte :
 Le simulateur part des hypothèses suivantes :
 
 - le montant total des cotisations patronales et salariales s’élève à 25,31% ;
-- 10 € cotisé = 1 point ;
+- 10 € cotisés = 1 point ;
 - La valeur de service du point est de 0,55€ / point ;
 - certaines primes et indemnités (les plus courantes) peuvent être intégrées.
 
