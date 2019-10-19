@@ -55,7 +55,7 @@ En premier lieu, augmenter le nombre de prise en compte de cas particuliers se t
 
 En deuxième lieu, les utilisateur-ices doivent être guidé-es par un processus le plus court possible afin que l’outil soit réellement utilisé. Nous avons en conséquence volontairement limité les entrées de l’utilisateur-ice au strict minimum.
 
-En troisième et dernier lieu, l’enjeu est avant tout en terme de propagande : montrer il s’agit de montrer la différence entre l’ancien et le nouveau système pour des carrières types. Il s’agit avant tout de faire apparaître rapidement, de manière personnalisée, les pertes typiques pour les personnels, par mois et par année pour l’ordre de grandeur.
+En troisième et dernier lieu, l’enjeu est avant tout en terme de propagande : montrer il s’agit de montrer la différence entre le système actuel et le projet Delevoye/Macron système pour des carrières types. Il s’agit avant tout de faire apparaître rapidement, de manière personnalisée, les pertes typiques pour les personnels, par mois et par année pour l’ordre de grandeur.
 
 
 
