@@ -11,8 +11,6 @@ draft: false
 
 <script type="text/javascript" src="js/retraites.js"></script>
 <script type="text/javascript" src="js/esthetique.js"></script>
-<script type="text/javascript" src="js/impression.js"></script>
-
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
 
 <h2>Déroulement de votre carrière</h2>
