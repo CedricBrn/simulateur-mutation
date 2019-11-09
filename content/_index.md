@@ -11,6 +11,9 @@ draft: false
 
 <script type="text/javascript" src="js/retraites.js"></script>
 <script type="text/javascript" src="js/esthetique.js"></script>
+<script type="text/javascript" src="js/impression.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
 
 <h2>Déroulement de votre carrière</h2>
 
@@ -330,20 +333,30 @@ draft: false
     <input type="button" value="Calculer ma retraite" onclick="calcul();" />
 </div>
 <!--Balises d'accueil des résultats dans le système actuel -->
-<h2 id="resultatActuel"></h2>
-<p id="resultatActuel-contractuel"></p>
-<p id="salaire"></p>
-<p id="trimestresRequis"></p>
-<p id="trimestresAcquis"></p>
-<p id="retraiteRepartition"></p>
-
-<!--Balises d'accueil des résultats dans le système à points -->
-<h2 id="resultatPoint"></h2>
-<p id="resultatPoints-contractuel"></p>
-<p id="nombrePoints"></p>
-<p id="agePivot"></p>
-<p id="retraitePoints"></p>
-<p id="pertesMensuelles"></p>
-<p id="pertesAnnuelles"></p>
+<div id="resultat">
+	<h2 id="resultatActuel"></h2>
+	<p id="resultatActuel-contractuel"></p>
+	<p id="salaire"></p>
+	<p id="trimestresRequis"></p>
+	<p id="trimestresAcquis"></p>
+	<p id="retraiteRepartition"></p>
+	<!--Balises d'accueil des résultats dans le système à points -->
+	<h2 id="resultatPoint"></h2>
+	<p id="resultatPoints-contractuel"></p>
+	<p id="nombrePoints"></p>
+	<p id="agePivot"></p>
+	<p id="retraitePoints"></p>
+	<p id="pertesMensuelles"></p>
+	<p id="pertesAnnuelles"></p>
+	<div id = "logo-greve-impression">
+		<img src="visuels/visuel/AutocollantOnContinue.png">
+	</div>
+</div>
+<div id="impression">
+	<div class="boutonCalcul">
+		<input type="button" value="Imprimer le résultat" onclick="window.print();" />
+	</div>
 <div id="remarques"></div>
+
+</div>
 {{< /rawhtml >}}

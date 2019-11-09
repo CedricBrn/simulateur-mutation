@@ -94,7 +94,7 @@
         }
 
         //Affichage du titre 
-        document.getElementById('resultatActuel').innerHTML = "Retraite dans le système actuel";
+        document.getElementById('resultatActuel').innerHTML = "Ma retraite dans le système actuel";
 
         //Calcul du dernier salaire dans la balise prévue à cet effet
         let dernierSalaire = valeurPoint * indices[corps][echelon - 1];
@@ -220,7 +220,7 @@
             document.getElementById("retraiteRepartition").innerHTML = "Montant mensuel brut de la retraite : " + pensionRepartition + "€";
         }
         //Affichage du titre 
-        document.getElementById('resultatPoint').innerHTML = "Retraite dans le système à points (Delevoye)";
+        document.getElementById('resultatPoint').innerHTML = "Ma retraite dans le système à points (Delevoye)";
 
         annees = ageFinCarriere - ageDebutCarriere;
 
@@ -343,6 +343,9 @@
 
         //Remarques sur les simulations
         document.getElementById("remarques").innerHTML = "<h2>Remarques sur les simulations</h2><p>Les montants sont calculés à partir de la législation actuelle et des éléments du rapport Delevoye. Il s’agit de comparer le système actuel avec celui qui serait en vigueur à application complète de la réforme.</p><p>Nous avons considéré une évolution de carrière à l'ancienneté se terminant à la hors classe.<br/>Pour des raisons de simplicité, certaines situations ne sont pas prises en compte comme : le nombre d'enfants, le service militaire ou civil, les situations de handicap, les pensions de reversion, etc.</p><p><b>Il s'agit de comprendre quels seraient les écarts entre les deux systèmes et il n'y a pas de distorsion avec ces simplifications car les ordres de grandeurs demeurent similaires.</b></p><p><i>Si le gouvernement conteste ces simulations, libre à lui de mettre à disposition des salarié-e-s un outil comme celui que nous proposons !</i></p>";
+
+        // Faire apparaître le bouton d'impression
+        document.getElementById('impression').style.display = 'block';
 
 
     }

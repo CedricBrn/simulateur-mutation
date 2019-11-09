@@ -1,0 +1,28 @@
+.intro-and-nav {
+    display: none;
+}
+
+body > footer {
+    display: none;
+}
+
+main {
+    visibility: hidden;
+}
+
+main > h1 {
+    visibility: visible;
+}
+
+#resultat {
+    visibility: visible;
+    position: fixed;
+    margin-top: 4cm;
+    top: 4cm;
+    padding-bottom: 1cm;
+}
+
+#logo-greve-impression {
+    display: block;
+    padding: 2cm;
+}
