@@ -327,7 +327,6 @@
         //calcul des pertes mensuelles
         
         let pertesMensuelles = pensionRepartition - retraitePoints;
-        console.log('pertesMensuelles = ' + pertesMensuelles + '\n pensionRepartition' + pensionRepartition +'\n retraitePoints' + retraitePoints);
         //Arrondi au centime
         pertesMensuelles = Math.floor(pertesMensuelles * 100) / 100;
         if (pertesMensuelles > 0) {

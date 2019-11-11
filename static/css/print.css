@@ -1,3 +1,5 @@
+/** Setting margins */       
+
 .intro-and-nav {
     display: none;
 }
@@ -6,23 +8,26 @@ body > footer {
     display: none;
 }
 
-main {
-    visibility: hidden;
+#main > * {
+    display: none;
 }
 
-main > h1 {
-    visibility: visible;
+#main > h1 {
+    display: block;
 }
 
-#resultat {
-    visibility: visible;
-    position: fixed;
-    margin-top: 4cm;
-    top: 4cm;
-    padding-bottom: 1cm;
+
+#resultat, #resultat > * {
+    display: block;
+    /* top: 2 cm; */
 }
 
 #logo-greve-impression {
+    padding: 1cm;
     display: block;
-    padding: 2cm;
 }
+
+#impression > * {
+    display: none;
+}
+
