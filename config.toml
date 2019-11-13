@@ -47,13 +47,17 @@ enableGitInfo = true
     url = "/visuels/"
     weight = 3
   [[menu.nav]]
+    name = "Brochure"
+    url = "/brochure/"
+    weight = 4 
+  [[menu.nav]]
     name = "À propos de SUD éducation"
     url = "/apropos/"
-    weight = 4
+    weight = 5
   [[menu.nav]]
     name = "Presse"
     url = "/presse/"
-    weight = 5    
+    weight = 6    
 #  [[menu.nav]]
 #    name = "RSS"
 #    url = "/index.xml"
