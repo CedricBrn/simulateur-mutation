@@ -9,8 +9,8 @@ function impression(aImprimer) {
     fenetreImpression.document.write('</body></html>');
 
     fenetreImpression.document.close();
-    // fenetreImpression.focus()
-    // fenetreImpression.print();
-    // fenetreImpression.close();
+    fenetreImpression.focus()
+    fenetreImpression.print();
+    fenetreImpression.close();
     return true;
 }
