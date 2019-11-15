@@ -1,7 +1,7 @@
 /* Font for printing */
 @font-face {
     font-family: 'Flicker DEMO';
-    src: url("fonts/FlickerDEMO.woff2") format('woff2'), url("fonts/FlickerDEMO.woff") format('woff');
+    src: url("fonts/FlickerDEMO.woff2") format("woff2"), url("fonts/FlickerDEMO.woff") format("woff");
     font-style: normal;
 }
 
