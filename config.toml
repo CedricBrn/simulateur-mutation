@@ -55,9 +55,13 @@ enableGitInfo = true
     url = "/apropos/"
     weight = 5
   [[menu.nav]]
+    name = "Caisse de grève"
+    url = "/caissedegreve/"
+    weight = 6
+  [[menu.nav]]
     name = "Presse"
     url = "/presse/"
-    weight = 6    
+    weight = 7    
 #  [[menu.nav]]
 #    name = "RSS"
 #    url = "/index.xml"
