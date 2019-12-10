@@ -1,5 +1,5 @@
 ---
-title: "Caisse de grève"
+title: "Une caisse de grève pour soutenir les grévistes !"
 date: 2019-10-12T16:10:55+02:00
 draft: false
 ---
