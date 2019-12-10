@@ -21,6 +21,18 @@ Pour aider les grévistes de l’éducation, SUD éducation appelle donc toutes 
 [![](visuelcaissedegreve.png)](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
 
 
+## Comment donner ?
+
+Pour donner par carte bancaire, il vous suffit de [cliquer ici](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education).
+
+Pour donner par chèque, il suffit d'adresser un chèque par voie postale à l'adresse :
+
+> Fédération SUD éducation
+> 31 rue de la Grange aux Belles, 75010 Paris
+
+N'oubliez pas d'apposer la mention “Soutien aux grévistes” au dos du chèque.
+
+
 ## À quoi sert cet argent ?
 
 Il servira uniquement à la solidarité avec les grévistes de l’éducation :
