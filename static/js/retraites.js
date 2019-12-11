@@ -222,6 +222,11 @@
         //Affichage du titre 
         document.getElementById('resultatPoint').innerHTML = "Ma retraite dans le système à points (Delevoye)";
 
+        if (naissance < 1975 ){
+            document.getElementById("pertesMensuelles").innerHTML = "Le gouvernement a renoncé à appliquer son projet aux salarié-e-s né-e-s avant 1975. C’est une preuve de plus de l’injustice et de l’arbitraire de ce projet.";
+
+        } else {
+            
         annees = ageFinCarriere - ageDebutCarriere;
 
         //Intégration des primes
@@ -324,6 +329,8 @@
             document.getElementById("retraitePoints").innerHTML = "Montant mensuel brut de la retraite : " + retraitePoints + "&nbsp;€";
         }
 
+
+
         //calcul des pertes mensuelles
         
         let pertesMensuelles = pensionRepartition - retraitePoints;
@@ -348,3 +355,4 @@
 
 
     }
+}
