@@ -5,15 +5,15 @@ draft: false
 ---
 
 
-## Tract recto-verso
+## Pour nos retraites : en grève et on continue !
 
 *Pour télécharger le pdf, cliquez sur l'image.*
 
-[![Tract retraites 5 décembre recto-verso](Tract5decembre.png)](Tract5decembre.pdf)
+[![Tract retraites 5 décembre recto-verso](TractSuite10Decembre.png)](TractSuite10Decembre.pdf)
 
-## Tract 4 pages
+## Après les annonces de Philippe : désintox’
 
 *Pour télécharger le pdf, cliquez sur l'image.*
 
-[![Tract retraites 5 décembre 4 pages](Tract5decembre4pages.png)](Tract5decembre4pages.pdf)
+[![Tract retraites 5 décembre 4 pages](TractDesintox.png)](TractDesintox.pdf)
 
