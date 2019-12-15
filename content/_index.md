@@ -29,6 +29,8 @@ draft: false
 			    <option value="4" selected>Certifié⋅e, PLP, CPE…</option>
 			    <option value ="6">Agrégé-e, MCF</option>
 			    <option value="5">Prof⋅e des écoles</option>
+				<option value="7">SAENES, BIBAS, Tech</option>
+
 			   </select>
         </div>
     </div>

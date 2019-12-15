@@ -1,12 +1,13 @@
 function calcul() {
     /*Tableau de tableaux des indices pour chaque corps
-    indices[0] : indices des ADJAENES, ATRF, magasinier⋅ère de bibliothèque
+    indices[0] : indices des cat. C : ADJAENES, ATRF, magasinier⋅ère de bibliothèque
 	indices[1] : indices des contractuels AESH
 	indices[2] : indices des contractuels Paris
 	indices[3] : indices des contractuels Amiens
 	indices[4] : indices des ceritifiés
 	indices[5] : indices des PE
-	indices[6] : indices des agrégés, MCF
+    indices[6] : indices des agrégés, MCF
+    indices[7] : indices des cat. B : SAENES, Tech, Bibas
 	etc.*/
     let indices = [
         [326, 327, 328, 329, 330, 332, 335, 339, 343, 354, 367, 380, 390, 402, 411, 430, 450, 466],
@@ -15,7 +16,8 @@ function calcul() {
         [367, 388, 410, 431, 453, 475, 498, 523, 548, 573, 598, 623, 650, 680, 710, 741],
         [388, 441, 445, 458, 471, 483, 511, 547, 583, 625, 669, 710, 756, 798],
         [388, 441, 445, 458, 471, 483, 511, 547, 583, 625, 669, 710, 756, 798],
-        [448, 498, 502, 539, 574, 609, 651, 700, 750, 796, 830, 890, 925, 972]
+        [448, 498, 502, 539, 574, 609, 651, 700, 750, 796, 830, 890, 925, 972],
+        [343, 349, 355, 361, 369, 381, 396, 415, 431, 441, 457, 477, 503]
     ];
     //Durées des échelons selon la même numérotation
     let dureesEchelons = [
@@ -25,7 +27,8 @@ function calcul() {
         [1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
         [1, 1, 2, 2, 2.5, 3, 3, 3.5, 4, 4, 4, 1, 1],
         [1, 1, 2, 2, 2.5, 3, 3, 3.5, 4, 4, 4, 1, 1],
-        [1, 1, 2, 2, 2.5, 3, 3, 3.5, 4, 4, 4, 1, 1]
+        [1, 1, 2, 2, 2.5, 3, 3, 3.5, 4, 4, 4, 1, 1],
+        [2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4]
     ];
 
 
