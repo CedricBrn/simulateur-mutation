@@ -4,7 +4,7 @@ date: 2019-10-12T16:10:55+02:00
 draft: false
 ---
 
-*Une adresse, simple à retenir : [caissedegreve.sudeducation.org]()*
+*Une adresse, simple à retenir : [caissedegreve.sudeducation.org](https://retraites.sudeducation.org/caissedegreve/)*
 
 Pour obtenir satisfaction sur nos revendications, la seule solution est l’amplification d’un mouvement reconductible massif et dans la durée pour bloquer l’économie.
 

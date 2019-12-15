@@ -22,12 +22,12 @@ draft: false
         <div class="menuSelection">
 
             <select name="Corps" id="statut" onchange="afficheDirection();">
-			    <option value="0">ADJAENES</option>
+			    <option value="0">ADJAENES, ATRF, magasinier⋅ère</option>
 			    <option value="1">AESH</option>
 			    <option value="2">Contractuel-le enseignant-e (grille favorable, ex Paris)</option>
 			    <option value="3">Contractuel-le enseignant-e (grille défavorable, ex  Amiens)</option>
 			    <option value="4" selected>Certifié⋅e, PLP, CPE…</option>
-			    <option value ="6">Agrégé-e</option>
+			    <option value ="6">Agrégé-e, MCF</option>
 			    <option value="5">Prof⋅e des écoles</option>
 			   </select>
         </div>

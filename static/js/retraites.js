@@ -1,12 +1,12 @@
 function calcul() {
     /*Tableau de tableaux des indices pour chaque corps
-    indices[0] : indices des ADJAENES
+    indices[0] : indices des ADJAENES, ATRF, magasinier⋅ère de bibliothèque
 	indices[1] : indices des contractuels AESH
 	indices[2] : indices des contractuels Paris
 	indices[3] : indices des contractuels Amiens
 	indices[4] : indices des ceritifiés
 	indices[5] : indices des PE
-	indices[6] : indices des agrégés
+	indices[6] : indices des agrégés, MCF
 	etc.*/
     let indices = [
         [326, 327, 328, 329, 330, 332, 335, 339, 343, 354, 367, 380, 390, 402, 411, 430, 450, 466],
