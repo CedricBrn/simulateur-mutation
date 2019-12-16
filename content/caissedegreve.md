@@ -6,6 +6,9 @@ draft: false
 
 # [Une caisse de grève pour soutenir les grévistes !](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
 
+[![](visuelcaissedegreve.png)](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
+
+
 *Une adresse, simple à retenir : [caissedegreve.sudeducation.org](https://retraites.sudeducation.org/caissedegreve/)*
 
 Pour obtenir satisfaction sur nos revendications, la seule solution est l’amplification d’un mouvement reconductible massif et dans la durée pour bloquer l’économie.
@@ -19,8 +22,6 @@ SUD éducation lance donc une caisse de grève permettant de soutenir les person
 Pour aider les grévistes de l’éducation, SUD éducation appelle donc toutes celles et ceux qui soutiennent la mobilisation en cours à participer à la caisse de grève.
 
 *Pour accéder à la caisse de grève, cliquez sur l'image*
-
-[![](visuelcaissedegreve.png)](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
 
 
 ## Comment donner ?
