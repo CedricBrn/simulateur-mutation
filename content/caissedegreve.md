@@ -4,7 +4,7 @@ date: 2019-10-12T16:10:55+02:00
 draft: false
 ---
 
-# [Une caisse de grève pour soutenir les grévistes !](https://retraites.sudeducation.org/caissedegreve/)
+# [Une caisse de grève pour soutenir les grévistes !](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
 
 *Une adresse, simple à retenir : [caissedegreve.sudeducation.org](https://retraites.sudeducation.org/caissedegreve/)*
 
