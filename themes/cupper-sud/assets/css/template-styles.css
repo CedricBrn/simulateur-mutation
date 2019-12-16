@@ -123,6 +123,8 @@ h1 {
     font-size: 2rem;
     color: Red;
 }
+
+
 h2 {
     font-size: 1.66rem;
 }
@@ -1035,6 +1037,12 @@ h1 svg {
 /* Pour revenir au thème standard, supprimer tout ce qui est en dessous. */
 
 
+h1 a {
+    text-decoration: none;
+    border-bottom: none;
+
+}
+
 
 .formulaire {
     list-style-type: none; /* Désactiver les puces du formulaire*/
@@ -1057,12 +1065,6 @@ h1 svg {
 #impression {
     display:none;
 }
-
-/* #primeISAE {
-        display: none;
-} */
-
-
 
 .blocSelection {
 	position: relative;
