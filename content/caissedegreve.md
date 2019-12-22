@@ -49,9 +49,11 @@ Il servira uniquement à la solidarité avec les grévistes de l’éducation :
 
 ## Est-ce que mon don servira uniquement à des enseignant-e-s syndiqué-e-s à SUD éducation ?
 
-Non. l’argent collecté par la fédération sera reversé aux syndicats locaux, ce qui leur permettra d’abonder les caisses de soutien locales, et d’organiser la solidarité au plus près des réalités locales.
-Comment les personnels pourront-ils et elles faire connaître leur situation pour bénéficier de la caisse de soutien ?
-SUD éducation mettra en œuvre ses moyens de communications syndicaux : affichage sur son site, et préviendra les personnels par un mail spécifique sur la messagerie académique de tous les personnels.
+Non. L’argent collecté par la fédération sera reversé aux syndicats locaux, ce qui leur permettra d’abonder les caisses de soutien locales, et d’organiser la solidarité au plus près des réalités locales.
+
+## Comment les personnels pourront-ils et elles faire connaître leur situation pour bénéficier de la caisse de soutien ?
+
+SUD éducation mettra en œuvre ses moyens de communications syndicaux : affichage sur son site par exemple, et préviendra les personnels par un mail spécifique sur la messagerie académique de tous les personnels.
 
 ## Et mes données personnelles ?
 
