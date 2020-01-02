@@ -9,7 +9,7 @@ draft: false
 [![](visuelcaissedegreve.png)](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
 
 
-*Une adresse, simple à retenir : [caissedegreve.sudeducation.org](https://retraites.sudeducation.org/caissedegreve/)*
+*Une adresse, simple à retenir : [caissedegreve.sudeducation.org](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)*
 
 Pour obtenir satisfaction sur nos revendications, la seule solution est l’amplification d’un mouvement reconductible massif et dans la durée pour bloquer l’économie.
 
@@ -67,4 +67,9 @@ SUD éducation s’engage à ne vous contacter que dans le cadre de cette campag
 ## Et quelle confiance puis-je avoir dans le fait que ces fonds seront effectivement répartis entre les grévistes ?
 
 SUD éducation est une organisation syndicale. À ce titre, elle fait certifier et publie ses comptes chaque année. Chacun et chacune pourront vérifier que l’argent a été effectivement versé aux grévistes.
+
+
+### Je donne en ciquant [ici](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
+
+
 
