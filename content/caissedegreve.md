@@ -69,7 +69,7 @@ SUD éducation s’engage à ne vous contacter que dans le cadre de cette campag
 SUD éducation est une organisation syndicale. À ce titre, elle fait certifier et publie ses comptes chaque année. Chacun et chacune pourront vérifier que l’argent a été effectivement versé aux grévistes.
 
 
-### Je donne en ciquant [ici](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
+### Je donne en cliquant [ici](https://www.helloasso.com/associations/sud-education/collectes/solidarite-avec-les-grevistes-de-l-education)
 
 
 
