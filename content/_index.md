@@ -21,7 +21,7 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
         <div class="menuSelection">
             <select name="Corps" id="statut">
 			    <option value="0">Professeur⋅e des écoles</option>
-			    <option value="1">Certifié⋅e, PLP, PEPS</option>
+			    <option value="1">Certifié⋅e, PLP, PEPS, CPE, PsyÉN</option>
 			    <option value="2">Contractuel⋅le enseignant⋅e</option>
 				<option value="3">Autre</option>
 			   </select>
