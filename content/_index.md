@@ -1,10 +1,10 @@
 ---
-title: "Comparateur de retraites entre le système actuel et le projet du gouvernement"
-date: 2019-10-12T08:08:47+02:00
+title: "Simulation de la revalorisation salariale"
+date: 2020-10-23T08:08:47+02:00
 draft: false
 ---
 
-⚠ *Le simulateur est prévu pour des carrières entamées relativement jeune et poursuivies à leur terme. C’est pourquoi l'âge de début de carrière est limité à 28 ans. Si vous avez été par exemple assistant-e d'éducation avant d'être enseignant-e, le simulateur sera bien plus proche de la réalité en faisant commencer votre carrière au début de votre période de travail comme AED.*
+Le ministre a promis une revalorisation « exceptionnelle » du salaire des personnels. Mais s’agit-il véritablement d’une hausse importante du salaire ? SUD éducation vous propose ce simulateur pour faire le point.
 
 {{< rawhtml >}}
 
@@ -55,7 +55,7 @@ draft: false
   
 </ul>
 <div class="boutonCalcul">
-    <input type="button" value="Calculer ma retraite" onclick="calcul();" />
+    <input type="button" value="Calculer" onclick="calcul();" />
 </div>
 <!--Balises d'accueil des résultats dans le système actuel -->
 <div id="resultat">
