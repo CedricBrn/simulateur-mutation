@@ -18,25 +18,19 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
 
 <div class="blocSelection">
     <label for="statut">Sélectionnez votre corps ou statut&nbsp;:</label>
-    <div id="apparenceStatut">
         <div class="menuSelection">
-
             <select name="Corps" id="statut">
 			    <option value="0">Professeur⋅e des écoles</option>
 			    <option value="1">Certifié⋅e, PLP, PEPS</option>
 			    <option value="2">Contractuel⋅le enseignant⋅e</option>
 				<option value="3">Autre</option>
-
 			   </select>
         </div>
-    </div>
 </div>
 
-
-<ul class="formulaire">
-    <li>
-        <div class="blocSelection">
-            <label for="echelon">Échelon&nbsp;:</label>
+  
+<div class="blocSelection">
+    <label for="echelon">Sélectionnez votre échelon&nbsp;:</label>
             <div class="menuSelection">
                 <select name="echelon" id="echelon">
 			    <option value="1">Échelon 1</option>
@@ -50,10 +44,10 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
 			    <option value="9">Échelon 9 et plus</option>
 			   </select>
             </div>
-        </div>
-	</li>
+</div>
+
   
-</ul>
+
 <div class="boutonCalcul">
     <input type="button" value="Calculer" onclick="calcul();" />
 </div>
