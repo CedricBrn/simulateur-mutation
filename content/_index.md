@@ -9,7 +9,7 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
 {{< rawhtml >}}
 
 
-<script type="text/javascript" src="js/retraites.js"></script>
+<script type="text/javascript" src="js/salaires.js"></script>
 <script type="text/javascript" src="js/esthetique.js"></script>
 <script type="text/javascript" src="js/impression.js"></script>
 <!-- <link rel="stylesheet" type="text/css" href="css/print.css" media="print"> -->
