@@ -1,7 +1,7 @@
-baseURL = "https://retraites.sudeducation.org"
+baseURL = "https://salaires.sudeducation.org"
 languageCode = "fr-fr"
 defaultContentLanguage = "fr"
-title = "Retraites : SUD éducation vous informe"
+title = "Salaires : SUD éducation vous informe"
 theme = "cupper-sud"
 #googleAnalytics = "UA-123456789-1"
 #disqusShortname = "yourdiscussshortname"
@@ -17,9 +17,9 @@ enableGitInfo = true
   quality = 99
 
 [params]
-  description = "Site d’information sur les retraites de la fédération SUD éducation"
-  homeMetaContent = "Site d'information sur les retraites de la fédération SUD éducation, simulation de départs à la retraite sur la base du rapport Delevoye, matériel de mobilisation : tracts, brochures d'information, simulateur de retraites"
-  footer = "[Fédération SUD éducation](https://www.sudeducation.org/), 2019"
+  description = "Site d’information sur les salaires de la fédération SUD éducation"
+  homeMetaContent = "Site d'information sur les salaires de la fédération SUD éducation, simulation des augmentations de salaires et des primes discutées lors du Grenelle de l’éducation"
+  footer = "[Fédération SUD éducation](https://www.sudeducation.org/), 2020"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
 #  codePenUser = "someUser"
