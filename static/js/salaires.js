@@ -27,18 +27,58 @@ function calcul() {
     const hsaCertifie = 1132.22 // HSA certifié en plus
 
     //Récupération de la valeur du bouton "corps" sélectionné
-    let corps = parseInt(document.getElementById('statut').value, 10);
-    let echelon = indices[corps][parseInt(document.getElementById('echelon').value, 10) - 1]
+    let corps = document.getElementById('statut').value
 
-    if (corps < 3) {
-        salaireBrutEchelon = (echelon * pointIndice) + (isoe / 12)
-    }
+    let echelon = null
+    let salaireBrutEchelon = null
 
+    switch(corps) {
+        case "pe":
+            echelon = indices[1][parseInt(document.getElementById('echelon').value, 10) - 1]
+            salaireBrutEchelon = (echelon * pointIndice) + (isoe / 12)
+          break;
+        case "capes":
+            echelon = indices[0][parseInt(document.getElementById('echelon').value, 10) - 1]
+            salaireBrutEchelon = (echelon * pointIndice) + (isoe / 12)
+          break;
+        case "agregation":
+            echelon = indices[2][parseInt(document.getElementById('echelon').value, 10) - 1]
+            salaireBrutEchelon = (echelon * pointIndice) + (isoe / 12)
+            break;
+        default:
+          echelon = null
+      } 
+
+
+    console.log(corps)
     console.log(salaireBrutEchelon)
 
     //Affichage du résultat
 
     document.getElementById('resultat').style.display = 'block';
 
+    // Cas des personnels non-enseignants
+    if (corps == "autre") {
+        document.getElementById('autre').style.display = 'block';
+        return
+    }
+
+    // Cas des enseignant-es non-titulaires
+    if (corps == "contrat") {
+        document.getElementById('contractuel').style.display = 'block';
+        return
+    }
+
+    // Cas des enseignant-es au 1er échelon
+    if (echelon == 1) {
+        document.getElementById('debutCarriere').style.display = 'block';
+        return
+    }
+
+    // Cas des enseignant-es au 9e échelon CN et plus
+    if (echelon == 9) {
+        document.getElementById('echelonEleve').style.display = 'block';
+        return
+    }
 
 }
