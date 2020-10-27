@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
-    font-family: 'Flicker DEMO';
-    src: url('{{ "css/fonts/FlickerDEMO.woff2" | absURL }}') format('woff2'), url('{{ "css/fonts/FlickerDEMO.woff" | absURL }}') format('woff');
+    font-family: 'Montserrat';
+    src: url('{{ "css/fonts/montserrat800.woff2" | absURL }}') format('woff2'), url('{{ "css/fonts/montserrat800.woff" | absURL }}') format('woff');
     font-style: normal;
 }
 *,
@@ -116,7 +116,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: Flicker DEMO, serif;
+    font-family:  Montserrat, serif;
     line-height: 1.125;
 }
 h1 {
