@@ -10,8 +10,6 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
 
 
 <script type="text/javascript" src="js/salaires.js"></script>
-<script type="text/javascript" src="js/esthetique.js"></script>
-<script type="text/javascript" src="js/impression.js"></script>
 <link rel="stylesheet" type="text/css" href="css/resultat.css">
 
 <h2>Votre situation</h2>
@@ -19,7 +17,8 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
 <div class="blocSelection">
     <label for="statut">Sélectionnez votre corps ou statut&nbsp;:</label>
         <div class="menuSelection">
-            <select name="Corps" id="statut">
+            <select name="Corps" id="statut" onchange="afficheEchelon();">
+				<option value="rien" selected>Choisissez…</option>
 			    <option value="pe">Professeur⋅e des écoles</option>
 			    <option value="certifie">Certifié⋅e, PLP, PEPS, CPE, PsyÉN</option>
 			    <option value="contrat">Contractuel⋅le enseignant⋅e</option>
@@ -30,13 +29,13 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
 </div>
 
   
-<div class="blocSelection">
+<div class="blocSelection" id="menuEchelon">
     <label for="echelon">Sélectionnez votre échelon&nbsp;:</label>
             <div class="menuSelection">
                 <select name="echelon" id="echelon">
 			    <option value="1">Échelon 1</option>
 			    <option value="2">Échelon 2</option>
-			    <option value="3">Échelon 3</option>
+			    <option value="3" selected>Échelon 3</option>
 			    <option value="4">Échelon 4</option>
 			    <option value="5">Échelon 5</option>
 			    <option value="6">Échelon 6</option>
@@ -49,10 +48,11 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
 
   
 
-<div class="boutonCalcul">
+<div class="boutonCalcul" id="calcul">
     <input type="button" value="Calculer" onclick="calcul();" />
 </div>
 
+<div id="aAfficher">
 <div id="resultat">
 	<h2>Résultat</h2>
 	<p>Le gouvernement envisage 4 scénarios de répartition de 400 millions d’euros. Il s’agit d’une prime dégressive à mesure que l’on progresse dans la carrière.</p>
@@ -82,13 +82,18 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
 <div id="scenarios">
 	<h3>Scénario 1</h3>
 	<p id="sc1">
+	<p id="sc1inflation"></p>
 	<h3>Scénario 2</h3>
 	<p id="sc2">
+	<p id="sc2inflation"></p>
 	<h3>Scénario 3</h3>
 	<p id="sc3">
+	<p id="sc3inflation"></p>
 	<h3>Scénario 4</h3>
 	<p id="sc4">
+	<p id="sc4inflation"></p>
 </div>
 
+</div>
 
 {{< /rawhtml >}}

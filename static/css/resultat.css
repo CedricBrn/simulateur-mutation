@@ -27,3 +27,11 @@
     display: none;
     /* top: 2 cm; */
 }
+
+#menuEchelon {
+    display: none;
+}
+
+#calcul {
+    display: none;
+}
