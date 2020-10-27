@@ -212,11 +212,11 @@ function calcul() {
             indice = indices[1][echelon - 1]
             salaireBrutEchelon = Math.floor( ( (indice * pointIndice) + (isoe / 12)) *100 ) / 100 
             break;
-        case "capes":
+        case "certifie":
             indice = indices[0][echelon - 1]
             salaireBrutEchelon = Math.floor( ( (indice * pointIndice) + (isoe / 12)) *100 ) / 100 
             break;
-        case "agregation":
+        case "agrege":
             indice = indices[2][echelon - 1]
             salaireBrutEchelon = Math.floor( ( (indice * pointIndice) + (isoe / 12)) *100 ) / 100 
             break;
@@ -239,7 +239,7 @@ function calcul() {
 
     // Cas des enseignant-es non-titulaires
     if (corps == "contrat") {
-        document.getElementById('contractuel').style.display = 'block'
+        document.getElementById('contrat').style.display = 'block'
         return
     }
 
@@ -357,6 +357,11 @@ function afficheEchelon() {
         default:
             document.getElementById('aAfficher').style.display = 'none'
             document.getElementById('menuEchelon').style.display = 'none'
-
     }
+    document.getElementById('scenarios').style.display = 'none'
+    document.getElementById('echelonEleve').style.display = 'none'
+    document.getElementById('contrat').style.display = 'none'
+    document.getElementById('autre').style.display = 'none'
+    document.getElementById('debutCarriere').style.display = 'none'
+    document.getElementById('resultat').style.display = 'none'
 }
