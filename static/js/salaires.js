@@ -270,7 +270,7 @@ function calcul() {
         let salaireInflationCompensee = Math.floor(salaireBrutEchelon * inflation * 100) / 100;
         document.getElementById('sc1inflation').innerHTML = `Cette prime représente une augmentation de votre salaire de ${augmentationPourCent}%.
             Depuis 1995, le gel du point d’indice a conduit les salaires à baisser de 19,82% en raison de l’inflation.
-            Si le point d'indice était revalorisé, au lieu de ${salaireBrutEchelon} euros bruts mensuels, vous devriez gagner au même échelon au moins ${salaireInflationCompensee} euros.`
+            Si le point d'indice était revalorisé, <b>au lieu de ${salaireBrutEchelon} euros bruts mensuels, vous devriez gagner au même échelon au moins ${salaireInflationCompensee} euros.</b>`
 
     } else {
         document.getElementById("sc1").innerHTML = "Ce scénario ne prévoit pas de prime pour votre échelon."
@@ -290,7 +290,7 @@ function calcul() {
         let salaireInflationCompensee = Math.floor(salaireBrutEchelon * inflation * 100) / 100;
         document.getElementById('sc2inflation').innerHTML = `Cette prime représente une augmentation de votre salaire de ${augmentationPourCent}%.
             Depuis 1995, le gel du point d’indice a conduit les salaires à baisser de 19,82% en raison de l’inflation.
-            Si le point d'indice était revalorisé, au lieu de ${salaireBrutEchelon} euros bruts mensuels, vous devriez gagner au même échelon au moins ${salaireInflationCompensee} euros.`
+            Si le point d'indice était revalorisé, <b>au lieu de ${salaireBrutEchelon} euros bruts mensuels, vous devriez gagner au même échelon au moins ${salaireInflationCompensee} euros.</b>`
 
     } else {
         document.getElementById("sc2").innerHTML = "Ce scénario ne prévoit pas de prime pour votre échelon."
@@ -310,7 +310,7 @@ function calcul() {
         let salaireInflationCompensee = Math.floor(salaireBrutEchelon * inflation * 100) / 100;
         document.getElementById('sc3inflation').innerHTML = `Cette prime représente une augmentation de votre salaire de ${augmentationPourCent}%.
             Depuis 1995, le gel du point d’indice a conduit les salaires à baisser de 19,82% en raison de l’inflation.
-            Si le point d'indice était revalorisé, au lieu de ${salaireBrutEchelon} euros bruts mensuels, vous devriez gagner au même échelon au moins ${salaireInflationCompensee} euros.`
+            Si le point d'indice était revalorisé, <b>au lieu de ${salaireBrutEchelon} euros bruts mensuels, vous devriez gagner au même échelon au moins ${salaireInflationCompensee} euros.</b>`
 
     } else {
         document.getElementById("sc3").innerHTML = "Ce scénario ne prévoit pas de prime pour votre échelon."
@@ -328,7 +328,7 @@ function calcul() {
         let salaireInflationCompensee = Math.floor(salaireBrutEchelon * inflation * 100) / 100;
         document.getElementById('sc4inflation').innerHTML = `Cette prime représente une augmentation de votre salaire de ${augmentationPourCent}%.
             Depuis 1995, le gel du point d’indice a conduit les salaires à baisser de 19,82% en raison de l’inflation.
-            Si le point d'indice était revalorisé, au lieu de ${salaireBrutEchelon} euros bruts mensuels, vous devriez gagner au même échelon au moins ${salaireInflationCompensee} euros.`
+            Si le point d'indice était revalorisé, <b>au lieu de ${salaireBrutEchelon} euros bruts mensuels, vous devriez gagner au même échelon au moins ${salaireInflationCompensee} euros.</b>`
 
     } else {
         document.getElementById("sc4").innerHTML = "Ce scénario ne prévoit pas de prime pour votre échelon."

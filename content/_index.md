@@ -54,12 +54,15 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
    </div>
    <div id="debutCarriere">
       <p>Le versement de la “prime d’attractivité” du ministère n'est pas prévu par le ministère au premier échelon. SUD éducation dénonce cette décision, d’autant plus que les salaires des enseignant-e-s en début de carrière sont scandaleusement bas. SUD éducation revendique une augmentation des salaires d’autant plus forte que les salaires sont faibles, pour tous les personnels.</p>
+	  <p>Pour mémoire, depuis 1995, le gel du point d’indice a conduit les <b>salaires dans la fonction publique à baisser de 19,82% en raison de l’inflation.</b></p>
    </div>
    <div id="echelonEleve">
       <p>Au-delà du huitième échelon de la classe normale, aucune revalorisation n’est prévue pour les personnels, pourtant enseignants depuis de nombreuses années.</p>
+	  <p>Pour mémoire, depuis 1995, le gel du point d’indice a conduit les <b>salaires dans la fonction publique à baisser de 19,82% en raison de l’inflation.</b>
    </div>
    <div id="autre">
       <p>Vous n’êtes pas personnel enseignant&nbsp;? La revalorisation n’est pas prévue pour vous. Pour SUD éducation, ce sont <b>bien tous les personnels qui doivent bénéficier d’une augmentation de salaire maintenant</b>.</p>
+	  <p>Pour mémoire, depuis 1995, le gel du point d’indice a conduit les <b>salaires dans la fonction publique à baisser de 19,82% en raison de l’inflation.</b>
    </div>
    <div id="contractuel">
       <p>Pour les enseignant-e-s non-titulaires, le ministère prévoit le versement forfaitaire d’une prime différente selon le scénario retenu.</p>
@@ -96,6 +99,8 @@ Le ministre a promis une revalorisation « exceptionnelle » du salaire des pe
             </tbody>
          </table>
       </figure>
+	  <p>Ces primes sont plus faibles que celles des titulaires. Ce sont donc une nouvelles fois les personnels avec les conditions d’emploi les moins favorables qui sont les plus mal traités</p>
+	  <p>Pour mémoire, depuis 1995, le gel du point d’indice a conduit les <b>salaires dans la fonction publique à baisser de 19,82% en raison de l’inflation.</b>
    </div>
    <div id="scenarios">
       <h3>Scénario 1</h3>
