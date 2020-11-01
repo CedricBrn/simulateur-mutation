@@ -92,13 +92,5 @@ Le code html
 {{< /rawhtml >}}
 ```
 
-La logique de masquage et affichage des différents menus est implémentée dans le fichier `static/js/esthetique.js`.
 
-## L’algorithme
-
-L’algorithme compare essentiellement la différence de revenu projeté entre le système actuel et le système par points annoncé par Delevoye.
-
-L’implémentation se trouve dans `static/js/salaires.js`. Le code est documenté au maximum pour permettre sa réutilisation.
-
-Les variables utiles sont déclarées en début de script pour permettre au maximum une appropriation de la logique du code.
 
