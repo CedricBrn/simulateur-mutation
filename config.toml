@@ -1,4 +1,4 @@
-baseURL = "https://wyrm.fr/~brendan/salaires/"
+baseURL = "https://storage.googleapis.com/simulateur-mutation/public/"
 languageCode = "fr-fr"
 defaultContentLanguage = "fr"
 title = "Salaires : SUD éducation vous informe"
@@ -17,52 +17,21 @@ enableGitInfo = true
   quality = 99
 
 [params]
-  description = "Site d’information sur les salaires de la fédération SUD éducation"
-  homeMetaContent = "Site d'information sur les salaires de la fédération SUD éducation, simulation des augmentations de salaires et des primes discutées lors du Grenelle de l’éducation"
+  description = "Site d’information sur les mutations de la fédération SUD éducation"
+  homeMetaContent = "Site d'information sur les mutations de la fédération SUD éducation, simulation des points des mutations inter-académiques"
   footer = "[Fédération SUD éducation](https://www.sudeducation.org/), 2020"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
 #  codePenUser = "someUser"
   katex = false
+ relURL = "simulateur-mutation/public/"
 
 [menu]
   [[menu.nav]]
-    name = "Comparateur"
+    name = "Accueil"
     url = "/"
     weight = 1
-#  [[menu.nav]]
-#    name = "Blog"
-#    url = "/post/"
-#    weight = 2
-#  [[menu.nav]]
-#    name = "Tags"
-#    url = "/tags/"
-#    weight = 3
-  [[menu.nav]]
-    name = "Tracts"
-    url = "/tracts/"
-    weight = 2
-  [[menu.nav]]
-    name = "Affiches et visuels"
-    url = "/visuels/"
-    weight = 3
-  [[menu.nav]]
-    name = "Brochure"
-    url = "/brochure/"
-    weight = 4 
   [[menu.nav]]
     name = "À propos de SUD éducation"
     url = "/apropos/"
-    weight = 5
-  [[menu.nav]]
-    name = "Caisse de grève"
-    url = "/caissedegreve/"
-    weight = 6
-  [[menu.nav]]
-    name = "Presse"
-    url = "/presse/"
-    weight = 7    
-#  [[menu.nav]]
-#    name = "RSS"
-#    url = "/index.xml"
-#    weight = 5
+    weight = 2

@@ -1,24 +1,23 @@
-# Simulateur “Grenelle de l’Éducation”
+# Simulateur "mutation inter académique 2020" 
 
-
+Le site a été construit sur base du simulateur "Grenelle de l'éducation", présent ici:
+https://github.com/Brndan/simulateur-salaires
 
 
 
 ## Objectifs
 
-L’objectif principal du simulateur est de simuler le montant de la *prime d’attractivité* en négociation lors du “Grenelle de l’Éducation” de la fin de l’année 2020.
+L’objectif principal du simulateur est de simuler le montant de points pour les mutations inter académiques de l’année 2020.
 
 
 
 ### Ce que le simulateur fait
 
-- Demander le statut, et éventuellement l’échelon
-- Retourner selon les cas une simulation de prime
-- Donner le rapport à l’inflation des salaires dans la fonction publique.
-
-
-
-
+- Demander des informations de base (statut, type de poste, ancienneté de poste, échelon)
+- Demander des informations de situation familiale
+- Demander des informations de situation personnelles
+- Demander des informations liées aux voeux
+- Donner le résultat du calcul.
 
 
 
