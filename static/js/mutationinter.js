@@ -53,14 +53,7 @@ function calculmutation() {
     const pt_situation_personnelle_reintegration = 1000;
     const pt_situation_personnelle_affectation_education_prioritaire = {"none"        : 0,
                                                                         "rep+"        : 400,
-                                                                        "rep"         : 200,
-                                                                        "apvlycee1"   : 60,
-                                                                        "apvlycee2"   : 120,
-                                                                        "apvlycee3"   : 180,
-                                                                        "apvlycee4"   : 240,
-                                                                        "apvlycee5ou6": 300,
-                                                                        "apvlycee7"   : 350,
-                                                                        "apvlycee8"   : 400};
+                                                                        "rep"         : 200};
     const pt_situation_personnelle_affectation_mayotte_guyane = 100;
     const pt_situation_personnelle_situation_medicale = {"none"                           : 0,
                                                          "amelioration_situation_handicap": 1000,

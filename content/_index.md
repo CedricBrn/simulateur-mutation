@@ -263,13 +263,6 @@ Ceci est un simulateur pour estimer vos points de mutation inter-académique. At
         <option value="none" selected>Sans objet</option>
         <option value="rep+">REP+ 5ans et +</option>
         <option value="rep">REP 5ans et +</option>
-        <option value="apvlycee1">APV lycée 1 an</option>
-        <option value="apvlycee2">APV lycée 2 ans</option>
-        <option value="apvlycee3">APV lycée 3 ans</option>
-        <option value="apvlycee4">APV lycée 4 ans</option>
-        <option value="apvlycee5ou6">APV lycée 5 ou 6ans</option>
-        <option value="apvlycee7">APV lycée 7 ans</option>
-        <option value="apvlycee8">APV lycée 8 ans et +</option>
       </select>
    </div>
 </div>
