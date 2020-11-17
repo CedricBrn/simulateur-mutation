@@ -400,9 +400,11 @@ Ceci est un simulateur pour estimer vos points de mutation inter-académique. At
                   <td class="col3" id="ct_voeu"></td>
                </tr>
                <tfoot>
+               <tr>
                   <td class="col1">Total</td>
                   <td class="col2" id="pt_total"></td>
                   <td class="col3"></td>
+               </tr>
                </tfoot>
             </tbody>
          </table>
